@@ -10,6 +10,7 @@ $(function () {
   const siteLanguage = $("body").css("direction");
   const localizationSettingsMenu = $("#main-header .localization-settings");
   const offcanvasBody = $("#main-header .offcanvas .offcanvas-body");
+  const tourguideWrap = $(".tourguide-wrap");
 
   // Home Vars
   const videoWrapCarousel = $(".video-carousel");
@@ -26,6 +27,32 @@ $(function () {
     });
   });
 
+  /* 
+    - Global Reused
+    1 -- Handle Loading page
+    2 -- Handle Tourguide
+  */
+
+  // 1 -- Handle Loading page
+  $(".loading-wrap").slideUp(100, function () {
+    $(this).remove();
+  });
+  // 2 -- Handle Tourguide
+  if (tourguideWrap.length) {
+    const tourguideStaticMessage = tourguideWrap.find(".tourguide-message");
+    const welcomeSound = new Audio(
+      "../../assets/audios/tourguide-welcome-sound.mp3"
+    );
+
+    setTimeout(() => {
+      // Check if this message didnt show yet
+      if (!tourguideStaticMessage.hasClass("show")) {
+        tourguideStaticMessage.addClass("show");
+        welcomeSound.play();
+      }
+    }, 3000);
+  }
+
   // In Mobile Screen and tablets
   if (window.innerWidth <= 768) {
     // Move localization settings menu to the offcanvas
@@ -35,10 +62,11 @@ $(function () {
 
   /* 
   - Home Page
-  -- Handle videos carousel (Howtobenefit section)
-  -- close video after user close modal
+  1 -- Handle videos carousel (Howtobenefit section)
+  2 -- close video after user close modal
   */
 
+  // 1 -- Handle videos carousel (Howtobenefit section)
   if (videoWrapCarousel.length) {
     videoWrapCarousel.owlCarousel({
       items: 3,
@@ -92,6 +120,7 @@ $(function () {
     }
   }
 
+  // 2 -- close video after user close modal
   $("#benefitmodalvid").on("hidden.bs.modal", function () {
     // stop video when close modal
     $("#benefitmodalvid iframe").attr(

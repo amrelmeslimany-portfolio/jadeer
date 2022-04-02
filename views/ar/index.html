@@ -9,7 +9,7 @@
     <meta name="description" content="Jadeer" />
     <meta name="keywords" content="jadeer, جدير">
     <meta name="theme-color" content="#45a142">
-    <!-- <link rel="shortcut icon" href="../favicon.png" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
     <!-- Fontawsome links -->
     <link rel="stylesheet" href="../../css/libs/solid.css">
     <link rel="stylesheet" href="../../css/libs/brands.css">
@@ -23,6 +23,11 @@
 
 <body>
 
+    <!-- Loading page -->
+    <div class="loading-wrap">
+        <img src="../../assets/img/logo-sm.png" width="100" alt="jadeer logo شعار جدير">
+        <h6 class="text-primary mt-3">جارى التحميل...</h6>
+    </div>
 
     <!-- Content -->
     <div class="wrap-fullpage">
@@ -107,10 +112,73 @@
                             <!-- Logo With Login Button -->
                             <div
                                 class="features-list-buttons d-flex align-items-center justify-content-between flex-row-reverse flex-xl-row justify-content-xl-start mb-4 mb-xl-0 gap-3 gap-xxl-6 me-sm-3 ms-xl-auto order-1">
-                                <div>
-                                    <a href="login.html"
+                                <div class="d-flex gap-2">
+                                    <!-- 
+                                        !! IF User not register display this
+
+                                        <a href="login.html"
                                         class="btn btn-primary text-nowrap rounded-3 bg-btn-hover white-hover shadow px-5 py-3">تسجيل
-                                        الدخول</a>
+                                        الدخول</a>                                        
+                                    -->
+
+
+                                    <button type="button" class="position-relative btn text-primary">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="align-bottom" width="19.96"
+                                            height="21.36" viewBox="0 0 27.96 29.36">
+                                            <path id="Path_62168" data-name="Path 62168"
+                                                d="M115.783,30.406c-2.672,0-4.932-4.628-4.932-10.108V16.615a8.185,8.185,0,0,0-6.14-7.9,2.188,2.188,0,0,0,.185-.88,2.235,2.235,0,1,0-4.47,0,2.132,2.132,0,0,0,.185.88,8.181,8.181,0,0,0-6.14,7.9V20.3c0,5.48-2.248,10.108-4.932,10.108a.863.863,0,0,0,0,1.726h9.6a3.606,3.606,0,0,0,7.041,0h9.6a.863.863,0,0,0,0-1.726ZM102.662,7.323a.507.507,0,0,1,.506.514c.006.567-1.011.567-1.011,0a.508.508,0,0,1,.505-.514Zm0,25.907a1.985,1.985,0,0,1-1.771-1.1h3.539A1.984,1.984,0,0,1,102.662,33.229Zm2.827-2.823H93.052c1.9-2.059,3.148-5.779,3.148-10.108V16.615a6.463,6.463,0,1,1,12.926,0V20.3c0,4.329,1.25,8.049,3.144,10.108h-6.782Z"
+                                                transform="translate(-88.68 -5.596)" fill="#45a142" />
+                                        </svg>
+
+
+                                        <span
+                                            class="position-absolute top-45 start-35 translate-middle bg-primary rounded-circle notification-alert">
+                                            <span class="outline-animation"></span>
+                                        </span>
+                                    </button>
+
+                                    <div class="dropdown myprofile-dropdown">
+                                        <button
+                                            class="btn border  border-primary rounded-3 text-primary dropdown-toggle"
+                                            type="button" data-bs-toggle="dropdown">
+                                            <i class="fa-regular fa-user me-1"></i>
+                                            حسابي
+                                        </button>
+                                        <ul class="dropdown-menu py-0 border-0" style="min-width: auto;">
+                                            <li>
+                                                <a class="dropdown-item display-md border-bottom py-3 text-secondary-dark d-flex gap-md-3 gap-1 align-items-center justify-content-between"
+                                                    href="profile.html">
+                                                    <span>حسابي</span>
+                                                    <i class="fas fa-chevron-left"></i>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a class="dropdown-item display-md border-bottom py-3 text-secondary-dark d-flex gap-md-3 gap-1 align-items-center justify-content-between"
+                                                    href="myorders.html">
+                                                    <span>طلباتي</span>
+                                                    <i class="fas fa-chevron-left"></i>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a class="dropdown-item display-md border-bottom py-3 text-secondary-dark d-flex gap-md-3 gap-1 align-items-center justify-content-between"
+                                                    href="wallet.html">
+                                                    <span>المحفظة</span>
+                                                    <i class="fas fa-chevron-left"></i>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a class="dropdown-item display-md py-3 text-secondary-dark d-flex gap-md-3 gap-1 align-items-center justify-content-between"
+                                                    href="#">
+                                                    <span>تسجيل الخروج</span>
+                                                    <i class="fas fa-chevron-left"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
                                 </div>
                                 <span>
                                     <img src="../../assets/img/2030vision.png" width="130" alt="2030 رؤية">
@@ -121,17 +189,17 @@
 
                             <ul class="navbar-nav mb-2 mb-lg-0 me-lg-1 me-xlg-3 align-items-xl-center">
                                 <li class="nav-item">
-                                    <a class="nav-link  px-2 px-lg-3 px-xxl-4 active" href="index.html">الرئيسية</a>
+                                    <a class="nav-link  px-2  px-xxl-4 active" href="index.html">الرئيسية</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link  px-2 px-lg-3 px-xxl-4" href="services.html">الخدمات</a>
+                                    <a class="nav-link  px-2  px-xxl-4" href="services.html">الخدمات</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link  px-2 px-lg-3 px-xxl-4" href="about-us.html">من
+                                    <a class="nav-link  px-2  px-xxl-4" href="about-us.html">من
                                         نحن</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link px-2 px-lg-3 px-xxl-4" href="contact-us.html">اتصل
+                                    <a class="nav-link px-2  px-xxl-4" href="contact-us.html">اتصل
                                         بنا</a>
                                 </li>
                             </ul>
@@ -141,14 +209,19 @@
             </div>
 
             <div class="container position-relative">
-                <img src="../../assets/img/rectengels-orange.png" class="rect-orange position-absolute"
-                    alt="orange rectangle">
+
                 <section class="zindex row gy-12 gy-lg-0 py-6">
                     <div class="col-lg-6 align-self-center">
-                        <h1 class="main-header-title h4">
-                            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
-                            العربى حيث يمكنك أن تولد مثل هذا النص العديد من النصوص
-                        </h1>
+                        <div class="position-relative">
+                            <img src="../../assets/img/rectengels-orange.png" class="rect-orange position-absolute"
+                                alt="orange rectangle">
+
+                            <h1 class="main-header-title h4 zindex">
+                                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
+                                العربى حيث يمكنك أن تولد مثل هذا النص العديد من النصوص
+                            </h1>
+                        </div>
+
 
                         <p class="paragraph-with-line mt-5 text-light-secondary-dark lead">
                             هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
@@ -451,8 +524,8 @@
                 <div class=" row gx-0 gy-10 gx-sm-10 g-md-5 ">
                     <div class="col-md-6 col-lg">
                         <a href="index.html">
-                            <img src="../../assets/img/logo-lg.png" width="300" class="img-fluid"
-                                alt="jadeer logo شعار جدير">
+                            <img src="../../assets/img/logo-lg.png" width="300"
+                                class="img-fluid d-block mx-auto mx-sm-0" alt="jadeer logo شعار جدير">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-5">
@@ -522,7 +595,7 @@
                             </a>
                             <a href="#" class="text-secondary">
                                 <svg id="instagram_1_" data-name="instagram (1)" xmlns="http://www.w3.org/2000/svg"
-                                    width="24.474" height="24.476" viewBox="0 0 24.474 24.476">
+                                    width="22.474" height="22.476" viewBox="0 0 24.474 24.476">
                                     <path id="Path_45" data-name="Path 45"
                                         d="M17.849,0H6.623A6.632,6.632,0,0,0,0,6.625V17.851a6.632,6.632,0,0,0,6.625,6.625H17.849a6.632,6.632,0,0,0,6.625-6.625V6.625A6.632,6.632,0,0,0,17.848,0ZM12.236,18.93a6.692,6.692,0,1,1,6.692-6.692A6.692,6.692,0,0,1,12.236,18.93ZM19.088,7.124a1.978,1.978,0,1,1,1.978-1.978A1.978,1.978,0,0,1,19.088,7.124Zm0,0"
                                         fill="#00806e" />
@@ -535,7 +608,7 @@
                                 </svg>
                             </a>
                             <a href="#" class="text-secondary display-lg">
-                                <i class="fa-brands fa-youtube"></i>
+                                <i class="fa-brands fa-youtube d-block mt-1"></i>
                             </a>
                         </div>
                         <div class="d-flex gap-6">
@@ -562,7 +635,36 @@
         </div>
     </footer>
 
+    <!-- Tourguide -->
+    <div class="tourguide-wrap">
+        <div class="tourguide-button-wrap position-relative">
+            <button class="btn rounded-circle overflow-hidden tourguide-button shadow">
+            </button>
+            <div class="tourguide-message shadow rounded-pill bg-secondary px-5 py-2 text-white position-absolute">
+                <!-- Text -->
+                مرحبا بك انا مساعدك الشخصى
+                <!-- Arrow -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="arrow-tourguide-message"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" width="52.953" height="51.642"
+                    viewBox="0 0 52.953 51.642">
+                    <defs>
+                        <filter id="Path_84179" x="0" y="0" width="52.953" height="51.642" filterUnits="userSpaceOnUse">
+                            <feOffset dy="3" input="SourceAlpha" />
+                            <feGaussianBlur stdDeviation="3" result="blur" />
+                            <feFlood flood-opacity="0.161" />
+                            <feComposite operator="in" in2="blur" />
+                            <feComposite in="SourceGraphic" />
+                        </filter>
+                    </defs>
+                    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Path_84179)">
+                        <path id="Path_84179-2" data-name="Path 84179" d="M13.5,0,27,24H0Z"
+                            transform="matrix(-0.89, 0.45, -0.45, -0.89, 43.95, 27.38)" fill="#00806e" />
+                    </g>
+                </svg>
 
+            </div>
+        </div>
+    </div>
 
     <!-- How to benefit videos modals -->
     <!-- !! You will handle stop video in jquery app.js file at Home page section -->
