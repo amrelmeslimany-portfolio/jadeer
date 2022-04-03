@@ -69,7 +69,8 @@ $(function () {
   /* 
   - Home Page
   1 -- Handle videos carousel (Howtobenefit section)
-  2 -- handle modal actions 
+  2 -- handle video modal actions
+
   */
 
   // 1 -- Handle videos carousel (Howtobenefit section)
@@ -128,22 +129,20 @@ $(function () {
     }
   }
 
-  // 2 -- handle modal actions
+  // 2 -- handle video modal actions
   if (videoModal.length) {
     videoModal.on("show.bs.modal", function () {
       // stop video when close modal
       let content = videoModal.find(".content");
 
       content.html(
-        `<iframe width="100%" height="100%" src="http://www.youtube.com/embed/dP15zlyra3c?html5=1"></iframe>`
+        `<video controls width="100%" height="100%" src="../../assets/videos/howtobenefit.mp4"></video>`
       );
     });
 
     videoModal.on("hidden.bs.modal", function () {
       // stop video when close modal
-      videoModal
-        .find("iframe")
-        .attr("src", videoModal.find("iframe").attr("src"));
+      videoModal.find(".content").html("");
     });
   }
 });
