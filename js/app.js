@@ -15,6 +15,7 @@ $(function () {
   // Home Vars
   const videoWrapCarousel = $(".video-carousel");
   const videoModal = $("#benefitmodalvid");
+  const serviceBox = $(".card-anm");
 
   // Enable Tootips Bootstrap
   const tooltipTriggerList = [
@@ -60,17 +61,17 @@ $(function () {
   AOS.init();
 
   // In Mobile Screen and tablets
-  if (window.innerWidth <= 768) {
-    // Move localization settings menu to the offcanvas
-    localizationSettingsMenu.appendTo(offcanvasBody);
-    localizationSettingsMenu.addClass("justify-content-between mt-3");
-  }
+  handleNavbarResponsive();
+  $(window).on("resize", () => {
+    handleNavbarResponsive();
+    handleServiceHeight();
+  });
 
   /* 
   - Home Page
   1 -- Handle videos carousel (Howtobenefit section)
   2 -- handle video modal actions
-
+  3 -- handle services height
   */
 
   // 1 -- Handle videos carousel (Howtobenefit section)
@@ -144,5 +145,30 @@ $(function () {
       // stop video when close modal
       videoModal.find(".content").html("");
     });
+  }
+
+  // 2 -- handle services height
+  handleServiceHeight();
+
+  // Global or Reused Functions
+  function handleNavbarResponsive() {
+    if (window.innerWidth <= 768) {
+      // Move localization settings menu to the offcanvas
+      localizationSettingsMenu.appendTo(offcanvasBody);
+      localizationSettingsMenu.addClass("justify-content-between mt-3");
+    }
+  }
+
+  function handleServiceHeight() {
+    if (serviceBox.length) {
+      let serviceBoxHeight = 0;
+      serviceBox.find(".service-card.back .card-body").each(function () {
+        if ($(this).innerHeight() > serviceBoxHeight) {
+          serviceBoxHeight = $(this).innerHeight();
+        }
+      });
+
+      serviceBox.height(serviceBoxHeight + "px");
+    }
   }
 });

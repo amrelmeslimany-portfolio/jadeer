@@ -32,12 +32,13 @@
 
     <!-- Content -->
     <div class="wrap-fullpage">
+        <!-- Start Header -->
         <header id="main-header">
             <div class="container mb-3">
                 <nav class="navbar navbar-expand-xl navbar-light bg-white border-bottom">
                     <!-- Navbar Buttons -->
                     <a href="index.html" class="navbar-brand">
-                        <img src="../../assets/img/logo-sm.png" alt="jadeer logo main" width="130">
+                        <img src="../../assets/img/logo-sm.png" alt="jadeer logo main" width="150">
                     </a>
                     <button class="navbar-toggler py-2 bg-primary border-0 order-1" type="button"
                         data-bs-toggle="offcanvas" data-bs-target="#mainNavbar" aria-controls="mainNavbar"
@@ -112,7 +113,7 @@
 
                             <!-- Logo With Login Button -->
                             <div
-                                class="features-list-buttons d-flex align-items-center justify-content-between flex-row-reverse flex-xl-row justify-content-xl-start mb-4 mb-xl-0 gap-3 gap-xxl-6 me-sm-3 ms-xl-auto order-1">
+                                class="features-list-buttons d-flex align-items-center justify-content-between flex-row-reverse flex-xl-row justify-content-xl-start mb-4 mb-xl-0 gap-3 gap-xxl-6 me-sm-3 ms-xl-auto ms-xxl-12 order-1">
                                 <div class="d-flex gap-2">
                                     <!-- 
                                         !! IF User not register display this
@@ -242,22 +243,23 @@
 
                     <div class="col-lg-6">
                         <img data-aos="fade-up" data-aos-once="true" src="../../assets/img/header-home.png"
-                            class="img-fluid d-block mx-auto float-lg-end" width="390" alt="home header jadeer جدير">
+                            class="img-fluid d-block mx-auto float-lg-end" width="410" alt="home header jadeer جدير">
                     </div>
                 </section>
             </div>
 
         </header>
 
+        <!-- Start Consulting -->
         <div class="container container-xxl pt-5 pb-10">
             <div class="start-consult-bannar overflow-hidden py-8 px-4 bg-primary position-relative">
                 <div class="d-flex align-items-center flex-wrap gap-6 gap-ms-12 justify-content-center zindex">
                     <p data-aos="zoom-in" data-aos-offset="100" data-aos-once="true"
                         class="text-white display-lg mb-0 ">ابدأ
-                        استشارتك معنا <a href="#" class="text-white border-bottom" data-bs-toggle="tooltip"
-                            data-bs-placement="top" title="التحدث الحى مباشرة مع مستشارك">مرئية</a>
-                        او <a href="#" class="text-white border-bottom" data-bs-toggle="tooltip" data-bs-placement="top"
-                            title="التحدث الحى مباشرة مع مستشارك">مسموعة</a></p>
+                        استشارتك معنا <span class=" border-bottom" data-bs-toggle="tooltip" data-bs-placement="top"
+                            title="التحدث الحى مباشرة مع مستشارك">مرئية</span>
+                        او <span class=" border-bottom" data-bs-toggle="tooltip" data-bs-placement="top"
+                            title="التحدث الحى مباشرة مع مستشارك">مسموعة</span></p>
                     <a data-aos-once="true" href="#" data-aos-offset="100" data-aos="zoom-in"
                         class="btn btn-light shadow  text-primary px-5 py-3 rounded-3 bg-btn-hover dark-hover">ابدا
                         استشارتك
@@ -277,6 +279,7 @@
             </div>
         </div>
 
+        <!-- Start howtobenefit videos -->
         <div class="howto-benefit py-10">
             <div class="container position-relative">
                 <div class="position-absolute top-0 start-0 w-100 bg-secondary py-10 px-5 howto-bigtext">
@@ -284,7 +287,7 @@
                         alt="Consulting استشارة">
                 </div>
 
-                <div class="position-relative zindex py-5">
+                <div class="position-relative zindex py-8">
                     <div class="howto-intro text-center">
                         <section data-aos-once="true" data-aos="zoom-in">
                             <h2 class="text-white mb-3">كيف تستفيد من جدير.؟</h2>
@@ -354,6 +357,7 @@
 
         </div>
 
+        <!-- Start Services -->
         <section class="services-section container pb-10">
             <div class="position-relative mb-8" data-aos-once="true" data-aos="zoom-in">
                 <h4 class="zindex">خدمات المنصة</h4>
@@ -362,9 +366,15 @@
 
             <div class="row  g-4">
                 <div class="col-lg-3 col-md-4 col-sm-6">
-                    <a data-aos="fade-up" href="#" class="d-block text-secondary-dark h-100 card-anm">
-                        <div class="card border-0 text-center service-card h-100">
-                            <div class="card-body">
+                    <a data-aos="fade-up" href="#" class=" d-block text-secondary-dark card-anm">
+                        <div class="shadow rounded-3 card border-0 text-center service-card front">
+                            <div class="card-body d-flex justify-content-center flex-column gap-5 align-items-center">
+                                <img src="../../assets/img/services/law.svg" width="150" alt="استشارة">
+                                <h5 class="fw-normal m-0 service-title">استشارات قانونيية</h5>
+                            </div>
+                        </div>
+                        <div class="shadow rounded-3 card border-0 text-center service-card back">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
                                 <img src="../../assets/img/services/law.svg" alt="استشارة">
                                 <article>
                                     <h5 class="fw-normal my-4 service-title">استشارات قانونيية</h5>
@@ -378,28 +388,15 @@
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
-                    <a data-aos="fade-up" data-aos-delay="50" href="#"
-                        class="d-block text-secondary-dark h-100 card-anm">
-                        <div class="card border-0 text-center service-card h-100">
-                            <div class="card-body">
-                                <img src="../../assets/img/services/podcast.svg" alt="podcast">
-                                <article>
-                                    <h5 class="fw-normal my-4 service-title">جدير بودكاست</h5>
-                                    <p class="text-light-secondary-dark mb-0 service-desc">
-                                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من
-                                        مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص
-                                    </p>
-                                </article>
+                    <a data-aos="fade-up" href="#" class=" d-block text-secondary-dark card-anm">
+                        <div class="shadow rounded-3 card border-0 text-center service-card front">
+                            <div class="card-body d-flex justify-content-center flex-column gap-5 align-items-center">
+                                <img src="../../assets/img/services/friendship.svg" width="150" alt=" العمل التطوعي">
+                                <h5 class="fw-normal m-0 service-title">العمل التطوعي</h5>
                             </div>
                         </div>
-                    </a>
-
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <a data-aos="fade-up" data-aos-delay="80" href="#"
-                        class="d-block text-secondary-dark h-100 card-anm">
-                        <div class="card border-0 text-center service-card h-100">
-                            <div class="card-body">
+                        <div class="shadow rounded-3 card border-0 text-center service-card back">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
                                 <img src="../../assets/img/services/friendship.svg" alt=" العمل التطوعي">
                                 <article>
                                     <h5 class="fw-normal my-4 service-title">العمل التطوعي</h5>
@@ -411,16 +408,21 @@
                             </div>
                         </div>
                     </a>
-
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
-                    <a data-aos="fade-up" data-aos-delay="100" href="#"
-                        class="d-block text-secondary-dark h-100 card-anm">
-                        <div class="card border-0 text-center service-card h-100">
-                            <div class="card-body">
-                                <img src="../../assets/img/services/createreviews.svg" alt="عقود">
+                    <a data-aos="fade-up" href="#" class=" d-block text-secondary-dark card-anm">
+                        <div class="shadow rounded-3 card border-0 text-center service-card front">
+                            <div class="card-body d-flex justify-content-center flex-column gap-5 align-items-center">
+
+                                <img src="../../assets/img/services/podcast.svg" alt="podcast" width="150">
+                                <h5 class="fw-normal m-0 service-title"> جدير بودكاست</h5>
+                            </div>
+                        </div>
+                        <div class="shadow rounded-3 card border-0 text-center service-card back">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <img src="../../assets/img/services/podcast.svg" alt="podcast">
                                 <article>
-                                    <h5 class="fw-normal my-4 service-title">إنشاء العقود ومراجعاتها</h5>
+                                    <h5 class="fw-normal my-4 service-title">جدير بودكاست </h5>
                                     <p class="text-light-secondary-dark mb-0 service-desc">
                                         هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من
                                         مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص
@@ -429,13 +431,39 @@
                             </div>
                         </div>
                     </a>
-
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
-                    <a data-aos="fade-up" data-aos-delay="120" href="#"
-                        class="d-block text-secondary-dark h-100 card-anm">
-                        <div class="card border-0 text-center service-card h-100">
-                            <div class="card-body">
+                    <a data-aos="fade-up" href="#" class=" d-block text-secondary-dark card-anm">
+                        <div class="shadow rounded-3 card border-0 text-center service-card front">
+                            <div class="card-body d-flex justify-content-center flex-column gap-5 align-items-center">
+                                <img src="../../assets/img/services/createreviews.svg" alt="عقود" width="150">
+                                <h5 class="fw-normal m-0 service-title">إنشاء العقود ومراجعاتها</h5>
+                            </div>
+                        </div>
+                        <div class="shadow rounded-3 card border-0 text-center service-card back">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <img src="../../assets/img/services/createreviews.svg" alt="عقود">
+                                <article>
+                                    <h5 class="fw-normal my-4 service-title"> إنشاء العقود ومراجعاتها </h5>
+                                    <p class="text-light-secondary-dark mb-0 service-desc">
+                                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من
+                                        مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص
+                                    </p>
+                                </article>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <a data-aos="fade-up" href="#" class=" d-block text-secondary-dark card-anm">
+                        <div class="shadow rounded-3 card border-0 text-center service-card front">
+                            <div class="card-body d-flex justify-content-center flex-column gap-5 align-items-center">
+                                <img src="../../assets/img/services/economic.svg" alt="استشارة" width="150">
+                                <h5 class="fw-normal m-0 service-title">أكادميية جدير القانونية</h5>
+                            </div>
+                        </div>
+                        <div class="shadow rounded-3 card border-0 text-center service-card back">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
                                 <img src="../../assets/img/services/economic.svg" alt="استشارة">
                                 <article>
                                     <h5 class="fw-normal my-4 service-title">أكادميية جدير القانونية</h5>
@@ -447,13 +475,18 @@
                             </div>
                         </div>
                     </a>
-
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
-                    <a data-aos="fade-up" data-aos-delay="140" href="#"
-                        class="d-block text-secondary-dark h-100 card-anm">
-                        <div class="card border-0 text-center service-card h-100">
-                            <div class="card-body">
+                    <a data-aos="fade-up" href="#" class=" d-block text-secondary-dark card-anm">
+                        <div class="shadow rounded-3 card border-0 text-center service-card front">
+                            <div class="card-body d-flex justify-content-center flex-column gap-5 align-items-center">
+                                <img src="../../assets/img/services/lawroles.svg" alt="استشارة" width="150">
+                                <h5 class="fw-normal m-0 service-title">الدورات القانونية</h5>
+                            </div>
+                        </div>
+                        <div class="shadow rounded-3 card border-0 text-center service-card back">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+
                                 <img src="../../assets/img/services/lawroles.svg" alt="استشارة">
                                 <article>
                                     <h5 class="fw-normal my-4 service-title">الدورات القانونية</h5>
@@ -465,13 +498,18 @@
                             </div>
                         </div>
                     </a>
-
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
-                    <a data-aos="fade-up" data-aos-delay="160" href="#"
-                        class="d-block text-secondary-dark h-100 card-anm">
-                        <div class="card border-0 text-center service-card h-100">
-                            <div class="card-body">
+                    <a data-aos="fade-up" href="#" class=" d-block text-secondary-dark card-anm">
+                        <div class="shadow rounded-3 card border-0 text-center service-card front">
+                            <div class="card-body d-flex justify-content-center flex-column gap-5 align-items-center">
+                                <img src="../../assets/img/services/ideas.svg" alt="استشارة" width="150">
+                                <h5 class="fw-normal m-0 service-title">تقديم المشاريع والمقترحات</h5>
+                            </div>
+                        </div>
+                        <div class="shadow rounded-3 card border-0 text-center service-card back">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+
                                 <img src="../../assets/img/services/ideas.svg" alt="استشارة">
                                 <article>
                                     <h5 class="fw-normal my-4 service-title">تقديم المشاريع والمقترحات</h5>
@@ -483,13 +521,18 @@
                             </div>
                         </div>
                     </a>
-
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
-                    <a data-aos="fade-up" data-aos-delay="180" href="#"
-                        class="d-block text-secondary-dark h-100 card-anm">
-                        <div class="card border-0 text-center service-card h-100">
-                            <div class="card-body">
+                    <a data-aos="fade-up" href="#" class=" d-block text-secondary-dark card-anm">
+                        <div class="shadow rounded-3 card border-0 text-center service-card front">
+                            <div class="card-body d-flex justify-content-center flex-column gap-5 align-items-center">
+                                <img src="../../assets/img/services/references.svg" alt="استشارة" width="150">
+                                <h5 class="fw-normal m-0 service-title">الانظمة والمراجع</h5>
+                            </div>
+                        </div>
+                        <div class="shadow rounded-3 card border-0 text-center service-card back">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+
                                 <img src="../../assets/img/services/references.svg" alt="استشارة">
                                 <article>
                                     <h5 class="fw-normal my-4 service-title">الانظمة والمراجع</h5>
@@ -501,16 +544,21 @@
                             </div>
                         </div>
                     </a>
-
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
-                    <a data-aos="fade-up" data-aos-delay="200" href="#"
-                        class="d-block text-secondary-dark h-100 card-anm">
-                        <div class="card border-0 text-center service-card h-100">
-                            <div class="card-body">
+                    <a data-aos="fade-up" href="#" class=" d-block text-secondary-dark card-anm">
+                        <div class="shadow rounded-3 card border-0 text-center service-card front">
+                            <div class="card-body d-flex justify-content-center flex-column gap-5 align-items-center">
+                                <img src="../../assets/img/services/search.svg" alt="استشارة" width="150">
+                                <h5 class="fw-normal m-0 service-title">البحوث والرسائل</h5>
+                            </div>
+                        </div>
+                        <div class="shadow rounded-3 card border-0 text-center service-card back">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+
                                 <img src="../../assets/img/services/search.svg" alt="استشارة">
                                 <article>
-                                    <h5 class="fw-normal my-4 service-title"> البحوث والرسائل</h5>
+                                    <h5 class="fw-normal my-4 service-title">البحوث والرسائل</h5>
                                     <p class="text-light-secondary-dark mb-0 service-desc">
                                         هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من
                                         مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص
@@ -519,13 +567,18 @@
                             </div>
                         </div>
                     </a>
-
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
-                    <a data-aos="fade-up" data-aos-delay="220" href="#"
-                        class="d-block text-secondary-dark h-100 card-anm">
-                        <div class="card border-0 text-center service-card h-100">
-                            <div class="card-body">
+                    <a data-aos="fade-up" href="#" class=" d-block text-secondary-dark card-anm">
+                        <div class="shadow rounded-3 card border-0 text-center service-card front">
+                            <div class="card-body d-flex justify-content-center flex-column gap-5 align-items-center">
+                                <img src="../../assets/img/services/otherservices.svg" alt="استشارة" width="150">
+                                <h5 class="fw-normal m-0 service-title">منصات جدير الاخرى</h5>
+                            </div>
+                        </div>
+                        <div class="shadow rounded-3 card border-0 text-center service-card back">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+
                                 <img src="../../assets/img/services/otherservices.svg" alt="استشارة">
                                 <article>
                                     <h5 class="fw-normal my-4 service-title">منصات جدير الاخرى</h5>
@@ -537,7 +590,6 @@
                             </div>
                         </div>
                     </a>
-
                 </div>
             </div>
         </section>
@@ -557,7 +609,7 @@
                     </div>
                     <div class="col-md-6 col-lg-5">
                         <div class="row g-3">
-                            <div class="col-sm-auto">
+                            <div class="col-3 col-sm-auto">
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
                                         <a href="index.html" class="text-secondary-dark nav-link maplink">الرئيسية</a>
@@ -570,7 +622,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col-sm-auto">
+                            <div class="col-7 col-sm-auto">
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
                                         <a href="usage-rules.html" class="nav-link text-secondary-dark maplink">سياسة
