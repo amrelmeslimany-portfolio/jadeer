@@ -14,6 +14,7 @@ $(function () {
 
   // Home Vars
   const videoWrapCarousel = $(".video-carousel");
+  const videoModal = $("#benefitmodalvid");
 
   // Enable Tootips Bootstrap
   const tooltipTriggerList = [
@@ -31,10 +32,11 @@ $(function () {
     - Global Reused
     1 -- Handle Loading page
     2 -- Handle Tourguide
+    3 -- Init global plugins
   */
 
   // 1 -- Handle Loading page
-  $(".loading-wrap").slideUp(100, function () {
+  $(".loading-wrap").slideUp(200, function () {
     $(this).remove();
   });
   // 2 -- Handle Tourguide
@@ -43,15 +45,19 @@ $(function () {
     const welcomeSound = new Audio(
       "../../assets/audios/tourguide-welcome-sound.mp3"
     );
-
+    welcomeSound.preload = "metadata";
     setTimeout(() => {
       // Check if this message didnt show yet
       if (!tourguideStaticMessage.hasClass("show")) {
-        tourguideStaticMessage.addClass("show");
         welcomeSound.play();
+        tourguideStaticMessage.addClass("show");
       }
     }, 3000);
   }
+
+  // Init global plugins
+  // AOS plugin (Scroll Animation)
+  AOS.init();
 
   // In Mobile Screen and tablets
   if (window.innerWidth <= 768) {
@@ -63,7 +69,7 @@ $(function () {
   /* 
   - Home Page
   1 -- Handle videos carousel (Howtobenefit section)
-  2 -- close video after user close modal
+  2 -- handle modal actions 
   */
 
   // 1 -- Handle videos carousel (Howtobenefit section)
@@ -109,6 +115,8 @@ $(function () {
       $(".owl-dots").remove();
 
       owlNav.prependTo(".owl-carousel");
+      owlNav.attr("data-aos-once", "true");
+      owlNav.attr("data-aos", "fade-up");
       owlNav.addClass("text-end px-4 mb-6");
       owlNav.find(".owl-counter").length &&
         owlNav.find(".owl-counter").remove();
@@ -120,12 +128,22 @@ $(function () {
     }
   }
 
-  // 2 -- close video after user close modal
-  $("#benefitmodalvid").on("hidden.bs.modal", function () {
-    // stop video when close modal
-    $("#benefitmodalvid iframe").attr(
-      "src",
-      $("#benefitmodalvid iframe").attr("src")
-    );
-  });
+  // 2 -- handle modal actions
+  if (videoModal.length) {
+    videoModal.on("show.bs.modal", function () {
+      // stop video when close modal
+      let content = videoModal.find(".content");
+
+      content.html(
+        `<iframe width="100%" height="100%" src="http://www.youtube.com/embed/dP15zlyra3c?html5=1"></iframe>`
+      );
+    });
+
+    videoModal.on("hidden.bs.modal", function () {
+      // stop video when close modal
+      videoModal
+        .find("iframe")
+        .attr("src", videoModal.find("iframe").attr("src"));
+    });
+  }
 });
