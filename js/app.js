@@ -123,7 +123,7 @@ $(function () {
       owlNav.find(".owl-counter").length &&
         owlNav.find(".owl-counter").remove();
       owlNav.find(".owl-prev").after(`
-        <span class="text-white owl-counter px-2 d-inline-block display-omd align-middle">
+        <span class="text-white owl-counter px-2 d-inline-block display-xomd align-middle">
           ${currentItem} / ${pageSize}
         </span>
       `);
