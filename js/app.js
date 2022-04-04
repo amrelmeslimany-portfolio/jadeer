@@ -134,12 +134,16 @@ $(function () {
       },
       navText: [
         `
-        <svg xmlns="http://www.w3.org/2000/svg" width="19.111" height="34.4" viewBox="0 0 19.111 34.4">
+        <svg xmlns="http://www.w3.org/2000/svg" width="19.111" ${
+          siteLanguage === "ltr" && "style='transform: rotate(180deg);'"
+        } height="34.4" viewBox="0 0 19.111 34.4">
         <path id="Path_81321" data-name="Path 81321" d="M226.9,124.411a1.805,1.805,0,0,0-1.911-1.911,1.735,1.735,0,0,0-1.338.573L209.7,137.024l-13.951-13.951a1.892,1.892,0,0,0-2.676,2.676l15.289,15.289a1.848,1.848,0,0,0,2.676,0l15.289-15.289A1.735,1.735,0,0,0,226.9,124.411Z" transform="translate(-122.5 226.9) rotate(-90)" fill="#fff"/>
         </svg>      
         `,
         `
-        <svg xmlns="http://www.w3.org/2000/svg" width="19.111" height="34.4" viewBox="0 0 19.111 34.4">
+        <svg xmlns="http://www.w3.org/2000/svg" ${
+          siteLanguage === "ltr" && "style='transform: rotate(180deg);'"
+        } width="19.111" height="34.4" viewBox="0 0 19.111 34.4">
         <path id="Path_81320" data-name="Path 81320" d="M226.9,124.411a1.805,1.805,0,0,0-1.911-1.911,1.735,1.735,0,0,0-1.338.573L209.7,137.024l-13.951-13.951a1.892,1.892,0,0,0-2.676,2.676l15.289,15.289a1.848,1.848,0,0,0,2.676,0l15.289-15.289A1.735,1.735,0,0,0,226.9,124.411Z" transform="translate(141.611 -192.5) rotate(90)" fill="#fff"/>
         </svg>      
         `,

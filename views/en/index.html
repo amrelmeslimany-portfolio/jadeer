@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>جدير</title>
+    <title>Jadeer</title>
     <meta name="description" content="Jadeer" />
     <meta name="keywords" content="jadeer, جدير">
     <meta name="theme-color" content="#45a142">
@@ -19,8 +19,8 @@
     <link rel="stylesheet" href="../../css/libs/aos.css">
     <link rel="stylesheet" href="../../css/libs/simplebar.css">
     <link rel="stylesheet" href="../../css/libs/owl.carousel.css">
-    <link rel="stylesheet" href="../../css/libs/bootstrap.rtl.css">
-    <link rel="stylesheet" href="../../css/style.rtl.css">
+    <link rel="stylesheet" href="../../css/libs/bootstrap.css">
+    <link rel="stylesheet" href="../../css/style.css">
 </head>
 
 <body>
@@ -28,7 +28,7 @@
     <!-- Loading page -->
     <div class="loading-wrap">
         <img src="../../assets/img/logo-sm.png" width="100" alt="jadeer logo شعار جدير">
-        <h6 class="text-primary mt-3">جارى التحميل...</h6>
+        <h6 class="text-primary mt-3">Loading...</h6>
     </div>
 
     <!-- Content -->
@@ -51,30 +51,29 @@
                     <div
                         class="localization-settings gap-2 ms-auto me-2 ms-xl-0 me-xl-0 order-xl-1 d-flex align-items-center">
                         <div class="dropdown order-xl-1">
-                            <button class="btn dropdown-toggle pb-3" type="button" id="languageDropdown"
+                            <button class="btn dropdown-toggle" type="button" id="languageDropdown"
                                 data-bs-toggle="dropdown">
-                                <img src="../../assets/img/flags/ar.png" class="me-1" alt="arabic العربيةاللغة language"
-                                    width="28">
-                                عربي
-                                <i class="fas fa-chevron-down ms-1 align-bottom"></i>
+                                <img src="../../assets/img/flags/en.png" class="me-1" alt="english language" width="28">
+                                EN
+                                <i class="fas fa-chevron-down ms-1"></i>
                             </button>
 
                             <ul class="dropdown-menu py-0 border-0 mt-1" aria-labelledby="languageDropdown">
+
                                 <li>
                                     <span class="dropdown-item py-2 active">
-                                        <img class="me-2 " width="28" src="../../assets/img/flags/ar.png"
-                                            alt="english language">
-                                        عربي
-                                    </span>
-
-                                </li>
-
-                                <li>
-                                    <a class="dropdown-item py-2" href="../en/index.html">
                                         <img class="me-2 " width="28" src="../../assets/img/flags/en.png"
+                                            alt="EN language">
+                                        EN
+                                    </span>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item py-2" href="../ar/index.html">
+                                        <img class="me-2 " width="28" src="../../assets/img/flags/ar.png"
                                             alt="arabic language">
-                                        الانجليزية
+                                        AR
                                     </a>
+
                                 </li>
                             </ul>
                         </div>
@@ -82,7 +81,7 @@
                             <button class="btn dropdown-toggle" type="button" id="curruncyDropdown"
                                 data-bs-toggle="dropdown">
                                 <span class="align-middle">KSA</span>
-                                <span class="align-middle">SAR - السعودية</span>
+                                <span class="align-middle">SAR - Saudia</span>
                                 <i class="fas fa-chevron-down ms-1 align-text-bottom"></i>
                             </button>
 
@@ -90,13 +89,13 @@
                                 <li>
                                     <a class="dropdown-item py-2" href="#">
                                         <span>KSA</span>
-                                        <span>SAR - السعودية</span>
+                                        <span>SAR - Saudia</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item py-2" href="#">
                                         <span>KSA</span>
-                                        <span>SAR - السعودية</span>
+                                        <span>SAR - Saudia</span>
                                     </a>
                                 </li>
                             </ul>
@@ -120,8 +119,8 @@
                                         !! IF User not register display this
 
                                         <a href="login.html"
-                                        class="btn btn-primary text-nowrap rounded-3 bg-btn-hover white-hover shadow px-5 py-3">تسجيل
-                                        الدخول</a>                                        
+                                        class="btn btn-primary text-nowrap rounded-3 bg-btn-hover white-hover shadow px-5 py-3">Sign In
+                                        </a>                                        
                                     -->
 
 
@@ -145,38 +144,38 @@
                                             class="btn border  border-primary rounded-3 text-primary dropdown-toggle"
                                             type="button" data-bs-toggle="dropdown">
                                             <i class="fa-regular fa-user me-1"></i>
-                                            حسابي
+                                            Profile
                                         </button>
                                         <ul class="dropdown-menu py-0 border-0">
                                             <li>
                                                 <a class="dropdown-item display-md border-bottom py-3 text-secondary-dark d-flex gap-md-3 gap-2 align-items-center justify-content-between"
                                                     href="profile.html">
-                                                    <span>حسابي</span>
-                                                    <i class="fas fa-chevron-left"></i>
+                                                    <span>Profile</span>
+                                                    <i class="fas fa-chevron-right"></i>
                                                 </a>
                                             </li>
 
                                             <li>
                                                 <a class="dropdown-item display-md border-bottom py-3 text-secondary-dark d-flex gap-md-3 gap-2 align-items-center justify-content-between"
                                                     href="myorders.html">
-                                                    <span>طلباتي</span>
-                                                    <i class="fas fa-chevron-left"></i>
+                                                    <span>Orders</span>
+                                                    <i class="fas fa-chevron-right"></i>
                                                 </a>
                                             </li>
 
                                             <li>
                                                 <a class="dropdown-item display-md border-bottom py-3 text-secondary-dark d-flex gap-md-3 gap-2 align-items-center justify-content-between"
                                                     href="wallet.html">
-                                                    <span>المحفظة</span>
-                                                    <i class="fas fa-chevron-left"></i>
+                                                    <span>Wallet</span>
+                                                    <i class="fas fa-chevron-right"></i>
                                                 </a>
                                             </li>
 
                                             <li>
                                                 <a class="dropdown-item display-md py-3 text-secondary-dark d-flex gap-md-3 gap-2 align-items-center justify-content-between"
                                                     href="#">
-                                                    <span>تسجيل الخروج</span>
-                                                    <i class="fas fa-chevron-left"></i>
+                                                    <span>Logout</span>
+                                                    <i class="fas fa-chevron-right"></i>
                                                 </a>
                                             </li>
                                         </ul>
@@ -192,18 +191,16 @@
 
                             <ul class="navbar-nav mb-2 mb-lg-0 me-lg-1 me-xlg-3 align-items-xl-center">
                                 <li class="nav-item">
-                                    <a class="nav-link  px-2  px-xxl-4 active" href="index.html">الرئيسية</a>
+                                    <a class="nav-link  px-2  px-xxl-4 active" href="index.html">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link  px-2  px-xxl-4" href="services.html">الخدمات</a>
+                                    <a class="nav-link  px-2  px-xxl-4" href="services.html">Services</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link  px-2  px-xxl-4" href="about-us.html">من
-                                        نحن</a>
+                                    <a class="nav-link  px-2  px-xxl-4" href="about-us.html">ًAbout Us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link px-2  px-xxl-4" href="contact-us.html">اتصل
-                                        بنا</a>
+                                    <a class="nav-link px-2  px-xxl-4" href="contact-us.html">Contact Us</a>
                                 </li>
                             </ul>
                         </div>
@@ -223,21 +220,18 @@
                                     alt="orange rectangle">
 
                                 <h1 class="main-header-title h4 zindex">
-                                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد
-                                    النص
-                                    العربى حيث يمكنك أن تولد مثل هذا النص العديد من النصوص
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente odit cupiditate
+                                    placeat possimus quasi quo nihil laboriosam maiores esse nobis
                                 </h1>
                             </div>
 
 
                             <p class="paragraph-with-line mt-5 text-light-secondary-dark lead">
-                                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
-                                العربى حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
-                                الحروف
-                                التى يولدها
-                                إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما
-                                تريد،
-                                النص لن يبدو مقسما ولا يحوي أخطاء لغوية،
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nam nesciunt eveniet
+                                nobis provident. Recusandae quod consequatur nihil ea nulla maxime vel possimus
+                                consequuntur aliquid, corrupti cum dolor officia aspernatur?
+                                Lorem ipsum dolor, sit amet.
+                                Lorem ipsum dolor, sit amet.
                             </p>
                         </div>
                     </div>
@@ -257,15 +251,14 @@
             <div class="start-consult-bannar overflow-hidden py-8 px-4 bg-primary position-relative">
                 <div class="d-flex align-items-center flex-wrap gap-6 gap-ms-12 justify-content-center zindex">
                     <p data-aos="zoom-in" data-aos-offset="100" data-aos-once="true"
-                        class="text-white display-lg mb-0 ">ابدأ
-                        استشارتك معنا <span class=" border-bottom" data-bs-toggle="tooltip" data-bs-placement="top"
-                            title="التحدث الحى مباشرة مع مستشارك">مرئية</span>
-                        او <span class=" border-bottom" data-bs-toggle="tooltip" data-bs-placement="top"
-                            title="التحدث الحى مباشرة مع مستشارك">مسموعة</span></p>
+                        class="text-white display-lg mb-0 ">Start your consultation
+                        <span class=" border-bottom" data-bs-toggle="tooltip" data-bs-placement="top"
+                            title="Live chat with your advisor">video</span>
+                        or <span class=" border-bottom" data-bs-toggle="tooltip" data-bs-placement="top"
+                            title="Live chat with your advisor">audio</span></p>
                     <a data-aos-once="true" href="#" data-aos-offset="100" data-aos="zoom-in"
-                        class="btn btn-light shadow  text-primary px-5 py-3 rounded-3 bg-btn-hover dark-hover">ابدا
-                        استشارتك
-                        الأن</a>
+                        class="btn btn-light shadow  text-primary px-5 py-3 rounded-3 bg-btn-hover dark-hover">Start
+                        consultation</a>
                 </div>
 
                 <img data-aos="zoom-in" data-aos-offset="90" data-aos-once="true" data-aos-delay="300"
@@ -292,12 +285,13 @@
                 <div class="position-relative zindex py-8">
                     <div class="howto-intro text-center">
                         <section data-aos-once="true" data-aos="zoom-in">
-                            <h2 class="text-white mb-3">كيف تستفيد من جدير.؟</h2>
+                            <h2 class="text-white mb-3">How do you benefit .?</h2>
                             <span class="title-line l1 bg-primary"></span>
                             <span class="title-line l2 bg-warning"></span>
                         </section>
-                        <p class="mt-6  text-shadow text-white fw-bold" data-aos-once="true" data-aos="zoom-in">خطوات
-                            الحصول على الخدمة كمستفيد</p>
+                        <p class="mt-6  text-shadow text-white fw-bold" data-aos-once="true" data-aos="zoom-in">
+                            Steps to obtain the service as a beneficiary
+                        </p>
                     </div>
 
                     <div class="owl-carousel video-carousel mt-6 px-4">
@@ -307,7 +301,7 @@
                                 class="position-absolute w-100 h-100 img-cover top-0 start-0 item-thumbnail"
                                 alt="vedio">
                             <div class="overflow-vide-actions position-absolute w-100 h-100 py-5 px-4">
-                                <h4 class="text-white thumbnail-title">عنوان الفيديو</h4>
+                                <h4 class="text-white thumbnail-title">Video title</h4>
                                 <span
                                     class="bg-light px-5 py-3 d-block d-flex align-items-center justify-content-center align-self-center my-auto rounded-3 px-8">
                                     <i class="fas fa-play text-primary display-omd"></i>
@@ -320,7 +314,7 @@
                                 class="position-absolute w-100 h-100 img-cover top-0 start-0 item-thumbnail"
                                 alt="vedio">
                             <div class="overflow-vide-actions position-absolute w-100 h-100 py-5 px-4">
-                                <h4 class="text-white thumbnail-title">عنوان الفيديو</h4>
+                                <h4 class="text-white thumbnail-title">Video title</h4>
                                 <span
                                     class="bg-light px-5 py-3 d-block d-flex align-items-center justify-content-center align-self-center my-auto rounded-3 px-8">
                                     <i class="fas fa-play text-primary display-omd"></i>
@@ -333,7 +327,7 @@
                                 class="position-absolute w-100 h-100 img-cover top-0 start-0 item-thumbnail"
                                 alt="vedio">
                             <div class="overflow-vide-actions position-absolute w-100 h-100 py-5 px-4">
-                                <h4 class="text-white thumbnail-title">عنوان الفيديو</h4>
+                                <h4 class="text-white thumbnail-title">Video title</h4>
                                 <span
                                     class="bg-light px-5 py-3 d-block d-flex align-items-center justify-content-center align-self-center my-auto rounded-3 px-8">
                                     <i class="fas fa-play text-primary display-omd"></i>
@@ -346,7 +340,7 @@
                                 class="position-absolute w-100 h-100 img-cover top-0 start-0 item-thumbnail"
                                 alt="vedio">
                             <div class="overflow-vide-actions position-absolute w-100 h-100 py-5 px-4">
-                                <h4 class="text-white thumbnail-title">عنوان الفيديو</h4>
+                                <h4 class="text-white thumbnail-title">Video title</h4>
                                 <span
                                     class="bg-light px-5 py-3 d-block d-flex align-items-center justify-content-center align-self-center my-auto rounded-3 px-8">
                                     <i class="fas fa-play text-primary display-omd"></i>
@@ -362,7 +356,7 @@
         <!-- Start Services -->
         <section class="services-section container pb-10">
             <div class="position-relative mb-8" data-aos-once="true" data-aos="zoom-in">
-                <h4 class="zindex">خدمات المنصة</h4>
+                <h4 class="zindex">Platform services</h4>
                 <img src="../../assets/img/rect-gray.svg" class="rect-gray position-absolute" alt="rectengel gray">
             </div>
 
@@ -372,17 +366,17 @@
                         <div class="shadow rounded-3 card border-0 text-center service-card front">
                             <div class="card-body d-flex justify-content-center flex-column gap-5 align-items-center">
                                 <img src="../../assets/img/services/law.svg" width="150" alt="استشارة">
-                                <h5 class="fw-normal m-0 service-title">استشارات قانونيية</h5>
+                                <h5 class="fw-normal m-0 service-title">Legal advice</h5>
                             </div>
                         </div>
                         <div class="shadow rounded-3 card border-0 text-center service-card back">
                             <div class="card-body d-flex flex-column align-items-center justify-content-center">
                                 <img src="../../assets/img/services/law.svg" alt="استشارة">
                                 <article>
-                                    <h5 class="fw-normal my-4 service-title">استشارات قانونيية</h5>
+                                    <h5 class="fw-normal my-4 service-title">Legal advice</h5>
                                     <p class="text-light-secondary-dark mb-0 service-desc">
-                                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من
-                                        مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. At voluptas harum,
+                                        molestiae voluptates accusamus
                                     </p>
                                 </article>
                             </div>
@@ -394,18 +388,17 @@
                         <div class="shadow rounded-3 card border-0 text-center service-card front">
                             <div class="card-body d-flex justify-content-center flex-column gap-5 align-items-center">
                                 <img src="../../assets/img/services/friendship.svg" width="150" alt=" العمل التطوعي">
-                                <h5 class="fw-normal m-0 service-title">العمل التطوعي</h5>
+                                <h5 class="fw-normal m-0 service-title">Volunteer work</h5>
                             </div>
                         </div>
                         <div class="shadow rounded-3 card border-0 text-center service-card back">
                             <div class="card-body d-flex flex-column align-items-center justify-content-center">
-                                <img src="../../assets/img/services/friendship.svg" alt=" العمل التطوعي">
+                                <img src="../../assets/img/services/friendship.svg" alt=" Volunteer work">
                                 <article>
-                                    <h5 class="fw-normal my-4 service-title">العمل التطوعي</h5>
-                                    <p class="text-light-secondary-dark mb-0 service-desc">
-                                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من
-                                        مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص
-                                    </p>
+                                    <h5 class="fw-normal my-4 service-title">Volunteer work</h5>
+                                    <p class="text-light-secondary-dark mb-0 service-desc">Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. At voluptas harum,
+                                        molestiae voluptates accusamus </p>
                                 </article>
                             </div>
                         </div>
@@ -417,18 +410,17 @@
                             <div class="card-body d-flex justify-content-center flex-column gap-5 align-items-center">
 
                                 <img src="../../assets/img/services/podcast.svg" alt="podcast" width="150">
-                                <h5 class="fw-normal m-0 service-title"> جدير بودكاست</h5>
+                                <h5 class="fw-normal m-0 service-title">Podcast Jadeer</h5>
                             </div>
                         </div>
                         <div class="shadow rounded-3 card border-0 text-center service-card back">
                             <div class="card-body d-flex flex-column align-items-center justify-content-center">
                                 <img src="../../assets/img/services/podcast.svg" alt="podcast">
                                 <article>
-                                    <h5 class="fw-normal my-4 service-title">جدير بودكاست </h5>
-                                    <p class="text-light-secondary-dark mb-0 service-desc">
-                                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من
-                                        مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص
-                                    </p>
+                                    <h5 class="fw-normal my-4 service-title">Podcast Jadeer</h5>
+                                    <p class="text-light-secondary-dark mb-0 service-desc">Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. At voluptas harum,
+                                        molestiae voluptates accusamus </p>
                                 </article>
                             </div>
                         </div>
@@ -439,18 +431,17 @@
                         <div class="shadow rounded-3 card border-0 text-center service-card front">
                             <div class="card-body d-flex justify-content-center flex-column gap-5 align-items-center">
                                 <img src="../../assets/img/services/createreviews.svg" alt="عقود" width="150">
-                                <h5 class="fw-normal m-0 service-title">إنشاء العقود ومراجعاتها</h5>
+                                <h5 class="fw-normal m-0 service-title">Contract creation and reviews</h5>
                             </div>
                         </div>
                         <div class="shadow rounded-3 card border-0 text-center service-card back">
                             <div class="card-body d-flex flex-column align-items-center justify-content-center">
                                 <img src="../../assets/img/services/createreviews.svg" alt="عقود">
                                 <article>
-                                    <h5 class="fw-normal my-4 service-title"> إنشاء العقود ومراجعاتها </h5>
-                                    <p class="text-light-secondary-dark mb-0 service-desc">
-                                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من
-                                        مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص
-                                    </p>
+                                    <h5 class="fw-normal my-4 service-title"> Contract creation and reviews </h5>
+                                    <p class="text-light-secondary-dark mb-0 service-desc">Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. At voluptas harum,
+                                        molestiae voluptates accusamus </p>
                                 </article>
                             </div>
                         </div>
@@ -461,18 +452,17 @@
                         <div class="shadow rounded-3 card border-0 text-center service-card front">
                             <div class="card-body d-flex justify-content-center flex-column gap-5 align-items-center">
                                 <img src="../../assets/img/services/economic.svg" alt="استشارة" width="150">
-                                <h5 class="fw-normal m-0 service-title">أكادميية جدير القانونية</h5>
+                                <h5 class="fw-normal m-0 service-title">Jadeer Legal Academy</h5>
                             </div>
                         </div>
                         <div class="shadow rounded-3 card border-0 text-center service-card back">
                             <div class="card-body d-flex flex-column align-items-center justify-content-center">
                                 <img src="../../assets/img/services/economic.svg" alt="استشارة">
                                 <article>
-                                    <h5 class="fw-normal my-4 service-title">أكادميية جدير القانونية</h5>
-                                    <p class="text-light-secondary-dark mb-0 service-desc">
-                                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من
-                                        مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص
-                                    </p>
+                                    <h5 class="fw-normal my-4 service-title">Jadeer Legal Academy</h5>
+                                    <p class="text-light-secondary-dark mb-0 service-desc">Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. At voluptas harum,
+                                        molestiae voluptates accusamus </p>
                                 </article>
                             </div>
                         </div>
@@ -483,7 +473,7 @@
                         <div class="shadow rounded-3 card border-0 text-center service-card front">
                             <div class="card-body d-flex justify-content-center flex-column gap-5 align-items-center">
                                 <img src="../../assets/img/services/lawroles.svg" alt="استشارة" width="150">
-                                <h5 class="fw-normal m-0 service-title">الدورات القانونية</h5>
+                                <h5 class="fw-normal m-0 service-title">Legal courses</h5>
                             </div>
                         </div>
                         <div class="shadow rounded-3 card border-0 text-center service-card back">
@@ -491,11 +481,10 @@
 
                                 <img src="../../assets/img/services/lawroles.svg" alt="استشارة">
                                 <article>
-                                    <h5 class="fw-normal my-4 service-title">الدورات القانونية</h5>
-                                    <p class="text-light-secondary-dark mb-0 service-desc">
-                                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من
-                                        مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص
-                                    </p>
+                                    <h5 class="fw-normal my-4 service-title">Legal courses</h5>
+                                    <p class="text-light-secondary-dark mb-0 service-desc">Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. At voluptas harum,
+                                        molestiae voluptates accusamus </p>
                                 </article>
                             </div>
                         </div>
@@ -506,7 +495,7 @@
                         <div class="shadow rounded-3 card border-0 text-center service-card front">
                             <div class="card-body d-flex justify-content-center flex-column gap-5 align-items-center">
                                 <img src="../../assets/img/services/ideas.svg" alt="استشارة" width="150">
-                                <h5 class="fw-normal m-0 service-title">تقديم المشاريع والمقترحات</h5>
+                                <h5 class="fw-normal m-0 service-title">Submit projects and proposals</h5>
                             </div>
                         </div>
                         <div class="shadow rounded-3 card border-0 text-center service-card back">
@@ -514,11 +503,10 @@
 
                                 <img src="../../assets/img/services/ideas.svg" alt="استشارة">
                                 <article>
-                                    <h5 class="fw-normal my-4 service-title">تقديم المشاريع والمقترحات</h5>
-                                    <p class="text-light-secondary-dark mb-0 service-desc">
-                                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من
-                                        مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص
-                                    </p>
+                                    <h5 class="fw-normal my-4 service-title">Submit projects and proposals</h5>
+                                    <p class="text-light-secondary-dark mb-0 service-desc">Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. At voluptas harum,
+                                        molestiae voluptates accusamus </p>
                                 </article>
                             </div>
                         </div>
@@ -529,7 +517,7 @@
                         <div class="shadow rounded-3 card border-0 text-center service-card front">
                             <div class="card-body d-flex justify-content-center flex-column gap-5 align-items-center">
                                 <img src="../../assets/img/services/references.svg" alt="استشارة" width="150">
-                                <h5 class="fw-normal m-0 service-title">الانظمة والمراجع</h5>
+                                <h5 class="fw-normal m-0 service-title">Systems and references</h5>
                             </div>
                         </div>
                         <div class="shadow rounded-3 card border-0 text-center service-card back">
@@ -537,11 +525,10 @@
 
                                 <img src="../../assets/img/services/references.svg" alt="استشارة">
                                 <article>
-                                    <h5 class="fw-normal my-4 service-title">الانظمة والمراجع</h5>
-                                    <p class="text-light-secondary-dark mb-0 service-desc">
-                                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من
-                                        مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص
-                                    </p>
+                                    <h5 class="fw-normal my-4 service-title">Systems and references</h5>
+                                    <p class="text-light-secondary-dark mb-0 service-desc">Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. At voluptas harum,
+                                        molestiae voluptates accusamus </p>
                                 </article>
                             </div>
                         </div>
@@ -552,7 +539,7 @@
                         <div class="shadow rounded-3 card border-0 text-center service-card front">
                             <div class="card-body d-flex justify-content-center flex-column gap-5 align-items-center">
                                 <img src="../../assets/img/services/search.svg" alt="استشارة" width="150">
-                                <h5 class="fw-normal m-0 service-title">البحوث والرسائل</h5>
+                                <h5 class="fw-normal m-0 service-title">Research and messages</h5>
                             </div>
                         </div>
                         <div class="shadow rounded-3 card border-0 text-center service-card back">
@@ -560,11 +547,10 @@
 
                                 <img src="../../assets/img/services/search.svg" alt="استشارة">
                                 <article>
-                                    <h5 class="fw-normal my-4 service-title">البحوث والرسائل</h5>
-                                    <p class="text-light-secondary-dark mb-0 service-desc">
-                                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من
-                                        مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص
-                                    </p>
+                                    <h5 class="fw-normal my-4 service-title">Research and messages</h5>
+                                    <p class="text-light-secondary-dark mb-0 service-desc">Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. At voluptas harum,
+                                        molestiae voluptates accusamus </p>
                                 </article>
                             </div>
                         </div>
@@ -575,7 +561,7 @@
                         <div class="shadow rounded-3 card border-0 text-center service-card front">
                             <div class="card-body d-flex justify-content-center flex-column gap-5 align-items-center">
                                 <img src="../../assets/img/services/otherservices.svg" alt="استشارة" width="150">
-                                <h5 class="fw-normal m-0 service-title">منصات جدير الاخرى</h5>
+                                <h5 class="fw-normal m-0 service-title">Other Jadeer platforms</h5>
                             </div>
                         </div>
                         <div class="shadow rounded-3 card border-0 text-center service-card back">
@@ -583,11 +569,10 @@
 
                                 <img src="../../assets/img/services/otherservices.svg" alt="استشارة">
                                 <article>
-                                    <h5 class="fw-normal my-4 service-title">منصات جدير الاخرى</h5>
-                                    <p class="text-light-secondary-dark mb-0 service-desc">
-                                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من
-                                        مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص
-                                    </p>
+                                    <h5 class="fw-normal my-4 service-title">Other Jadeer platforms</h5>
+                                    <p class="text-light-secondary-dark mb-0 service-desc">Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. At voluptas harum,
+                                        molestiae voluptates accusamus </p>
                                 </article>
                             </div>
                         </div>
@@ -616,16 +601,15 @@
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
                                         <a href="index.html"
-                                            class="text-secondary-dark nav-link maplink pt-0 pb-xl-4 pb-xxl-3">الرئيسية</a>
+                                            class="text-secondary-dark nav-link maplink pt-0 pb-xl-4 pb-xxl-3">Home</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="about-us.html"
-                                            class="nav-link text-secondary-dark maplink py-xl-4 py-xxl-3">من
-                                            نحن</a>
+                                            class="nav-link text-secondary-dark maplink py-xl-4 py-xxl-3">About Us</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="services.html"
-                                            class="nav-link text-secondary-dark maplink py-xl-4 py-xxl-3">الخدمات</a>
+                                            class="nav-link text-secondary-dark maplink py-xl-4 py-xxl-3">Services</a>
                                     </li>
                                 </ul>
                             </div>
@@ -633,20 +617,18 @@
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
                                         <a href="usage-rules.html"
-                                            class="nav-link text-secondary-dark maplink pt-0 pb-xl-4 pb-xxl-3">سياسة
-                                            الاستخدام</a>
+                                            class="nav-link text-secondary-dark maplink pt-0 pb-xl-4 pb-xxl-3">Usage
+                                            Policy</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="who-benefit.html"
-                                            class="nav-link text-secondary-dark maplink py-xl-4 py-xxl-3">من هم
-                                            المستفيدون</a>
+                                            class="nav-link text-secondary-dark maplink py-xl-4 py-xxl-3">
+                                            Beneficiaries</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="servicers.html"
-                                            class="nav-link text-secondary-dark maplink py-xl-4 py-xxl-3">من
-                                            هم
-                                            مقدمو
-                                            الخدمة</a>
+                                            class="nav-link text-secondary-dark maplink py-xl-4 py-xxl-3">
+                                            Service providers</a>
                                     </li>
                                 </ul>
                             </div>
@@ -654,17 +636,18 @@
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
                                         <a href="contact-us.html"
-                                            class="nav-link text-secondary-dark maplink pt-0 pb-xl-4 pb-xxl-3">اتصل
-                                            بنا</a>
+                                            class="nav-link text-secondary-dark maplink pt-0 pb-xl-4 pb-xxl-3">Contact
+                                            Us
+                                        </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="manage-jadeer.html"
-                                            class="nav-link text-secondary-dark maplink py-xl-4 py-xxl-3">إدارة
-                                            جدير</a>
+                                            class="nav-link text-secondary-dark maplink py-xl-4 py-xxl-3">
+                                            Managment</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="markting.html"
-                                            class="nav-link text-secondary-dark maplink py-xl-4 py-xxl-3">التسويق</a>
+                                            class="nav-link text-secondary-dark maplink py-xl-4 py-xxl-3">Markting</a>
                                     </li>
                                 </ul>
                             </div>
@@ -719,7 +702,9 @@
         <div class="text-center py-3 py-xxl-5 bg-secondary-dark bg-opacity-10">
             <div class="container">
                 <p class="mb-0 bottom-footer-text">
-                    جميع الحقوق محفوظة لمنصة جدير &copy; <script>
+                    All rights reserved to Jadeer ©
+
+                    <script>
                         document.write(new Date().getFullYear())
 
                     </script>
@@ -738,13 +723,13 @@
                 class="tourguide-message pointer-event-none shadow bg-secondary px-5 py-2 text-white position-absolute">
                 <!-- Text -->
                 <div class="message-text" data-simplebar>
-                    مرحبا بك انا مساعدك الشخصي
+                    Hello, I am your personal assistant
                 </div>
                 <!-- Actions -->
                 <div class="text-center tourguide-actions mt-1">
                     <div class=" btn-group btn-group-sm rounded-3">
-                        <button class="btn close btn-danger" type="button">اغلق</button>
-                        <button class="btn start btn-primary" type="button">ابدأ</button>
+                        <button class="btn close btn-danger" type="button">Close</button>
+                        <button class="btn start btn-primary" type="button">Start</button>
                     </div>
                 </div>
 
