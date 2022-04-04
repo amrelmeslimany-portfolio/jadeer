@@ -42,18 +42,57 @@ $(function () {
   });
   // 2 -- Handle Tourguide
   if (tourguideWrap.length) {
-    const tourguideStaticMessage = tourguideWrap.find(".tourguide-message");
+    const tourguideButton = tourguideWrap.find(".tourguide-button");
+    const tourguideHuman = tourguideWrap.find(".whole-human");
+    const tourguideMessageWrap = tourguideWrap.find(".tourguide-message");
+    const tourguideMessage = tourguideWrap.find(
+      ".tourguide-message .message-text"
+    );
+    const tourguideActions = tourguideWrap.find(
+      ".tourguide-message .tourguide-actions"
+    );
     const welcomeSound = new Audio(
       "../../assets/audios/tourguide-welcome-sound.mp3"
     );
-    welcomeSound.preload = "metadata";
+    // remove human
+    tourguideHuman.slideUp(1);
+    // Init tourguide
     setTimeout(() => {
       // Check if this message didnt show yet
-      if (!tourguideStaticMessage.hasClass("show")) {
+      if (!tourguideMessageWrap.hasClass("show")) {
         welcomeSound.play();
-        tourguideStaticMessage.addClass("show");
+        tourguideMessageWrap.addClass("show");
       }
     }, 3000);
+    // When user click
+    if (tourguideButton.length) {
+      tourguideButton.click(function () {
+        // Hide the init button
+        tourguideButton.slideUp(200, function () {
+          // if tourguide hide => show him
+          welcomeSound.play();
+          tourguideHuman.slideDown(200, () => {
+            // if init message didnt fire yet , remove it
+            !tourguideMessageWrap.hasClass("show") &&
+              tourguideMessageWrap.addClass("show");
+            // enable click on message wrap
+            tourguideMessageWrap.removeClass("pointer-event-none");
+            // show actions
+            tourguideActions.slideDown(200);
+          });
+        });
+      });
+
+      // if user click "close tourguide"
+      tourguideActions.find(".close").click(function () {
+        tourguideMessageWrap.removeClass("show");
+        tourguideMessageWrap.addClass("pointer-event-none");
+        tourguideHuman.delay(250).slideUp(200, () => {
+          // show init button
+          tourguideButton.slideDown(200);
+        });
+      });
+    }
   }
 
   // Init global plugins
