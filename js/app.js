@@ -97,7 +97,13 @@ $(function () {
 
   // Init global plugins
   // AOS plugin (Scroll Animation)
-  AOS.init();
+  AOS.init({
+    mirror: true,
+  });
+  // Lazy loading
+  $(".lazy").Lazy({
+    defaultImage: "../../assets/img/lazyloader.svg",
+  });
 
   // In Mobile Screen and tablets
   handleNavbarResponsive();
