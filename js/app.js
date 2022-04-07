@@ -3,6 +3,7 @@
   - Global Let Variabls
   - Main Navbar
   - Home Page
+  - Order New Consultation
 */
 
 $(function () {
@@ -16,6 +17,12 @@ $(function () {
   const videoWrapCarousel = $(".video-carousel");
   const videoModal = $("#benefitmodalvid");
   const serviceBox = $(".card-anm");
+
+  // Order New Consultation
+  const orderNewConSumbitButton = $(".to-successpage");
+
+  // Provider Profile
+  const navpillCarousel = $(".navpills-carousel");
 
   // Enable Tootips Bootstrap
   const tooltipTriggerList = [
@@ -95,15 +102,35 @@ $(function () {
     }
   }
 
-  // Init global plugins
-  // AOS plugin (Scroll Animation)
+  // 3 -- Init global plugins
+  // 3.1 -- AOS plugin (Scroll Animation)
   AOS.init({
     mirror: true,
   });
-  // Lazy loading
+  // 3.2 -- Lazy loading
   if ($(".lazy").length) {
     $(".lazy").Lazy({
       defaultImage: "../../assets/img/lazyloader.svg",
+    });
+  }
+
+  // 3.3 -- Calender Date
+  if ($(".reservatoinData").length) {
+    $(".reservatoinData").flatpickr({
+      inline: true,
+      minDate: "today",
+      maxDate: new Date(new Date().getFullYear() + 1, 0, 0), // MAx date is this year
+      monthSelectorType: "static",
+      altInput: true,
+      altInputClass: "d-none",
+      clickOpens: true,
+      defaultDate: new Date(Date.now() + 2 * 24 * 60 * 60 * 1000),
+      locale: {
+        firstDayOfWeek: 6,
+        weekdays: {
+          shorthand: ["S", "M", "T", "W", "T", "F", "S"],
+        },
+      },
     });
   }
 
@@ -121,7 +148,7 @@ $(function () {
   3 -- handle services height
   */
 
-  // 1 -- Handle videos carousel (Howtobenefit section)
+  // (Home) 1 -- Handle videos carousel (Howtobenefit section)
   if (videoWrapCarousel.length) {
     videoWrapCarousel.owlCarousel({
       items: 3,
@@ -181,7 +208,7 @@ $(function () {
     }
   }
 
-  // 2 -- handle video modal actions
+  // (Home) 2 -- handle video modal actions
   if (videoModal.length) {
     videoModal.on("show.bs.modal", function () {
       // stop video when close modal
@@ -198,8 +225,54 @@ $(function () {
     });
   }
 
-  // 2 -- handle services height
+  // (Home) 2 -- handle services height
   handleServiceHeight();
+
+  /* 
+    - Order New Consultation Page
+    1 - Handle Sumbit to redirect user
+  */
+  // (Order New Cons)  1 - Handle Sumbit to redirect user
+  if (orderNewConSumbitButton.length) {
+    orderNewConSumbitButton.click(function (e) {
+      if (location.href.includes("new-consultation.html")) {
+        e.preventDefault();
+        let redirectURL = location.href.replace(
+          "new-consultation.html",
+          "success-sent.html"
+        );
+        // redirect to success page
+        location.assign(redirectURL);
+      } else {
+        console.log("g");
+        return true;
+      }
+    });
+  }
+
+  /* 
+    - Service provider Profile
+    1 - Handle Nav pills carousel
+  */
+  // 1 - Handle Nav pills carousel
+  if (navpillCarousel.length) {
+    navpillCarousel.owlCarousel({
+      autoWidth: true,
+      rtl: siteLanguage === "rtl" ? true : false,
+      margin: 25,
+      dots: false,
+    });
+
+    navpillCarousel.find(".nav-link").click(function () {
+      $(this).addClass("active");
+      $(this)
+        .parent()
+        .parent()
+        .siblings()
+        .find(".nav-link")
+        .removeClass("active");
+    });
+  }
 
   // Global or Reused Functions
   function handleNavbarResponsive() {

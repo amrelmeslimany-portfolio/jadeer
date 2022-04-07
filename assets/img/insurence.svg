@@ -1,0 +1,32 @@
+     <svg xmlns="http://www.w3.org/2000/svg"
+                                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="26.043"
+                                                            height="33.816" viewBox="0 0 28.043 36.816">
+                                                            <defs>
+                                                                <linearGradient id="linear-gradient" x1="0.5" y1="1"
+                                                                    x2="0.5" gradientUnits="objectBoundingBox">
+                                                                    <stop offset="0" stop-color="#00806e" />
+                                                                    <stop offset="1" stop-color="#71de49" />
+                                                                </linearGradient>
+                                                            </defs>
+                                                            <g id="insurance" transform="translate(0)">
+                                                                <g id="Group_19033" data-name="Group 19033"
+                                                                    transform="translate(0 0)">
+                                                                    <g id="Group_19032" data-name="Group 19032">
+                                                                        <path id="Path_16845" data-name="Path 16845"
+                                                                            d="M87.965,5.869C81.995,5.869,75.808.335,75.746.28A1.079,1.079,0,0,0,74.3.28c-.062.056-6.232,5.589-12.219,5.589A1.079,1.079,0,0,0,61,6.948V19.865c0,10.464,7.783,14.645,13.637,16.88a1.079,1.079,0,0,0,.769,0c8.208-3.134,13.637-8.022,13.637-16.88V6.948A1.079,1.079,0,0,0,87.965,5.869Z"
+                                                                            transform="translate(-61 0)"
+                                                                            fill="url(#linear-gradient)" />
+                                                                    </g>
+                                                                </g>
+                                                                <g id="Group_19035" data-name="Group 19035"
+                                                                    transform="translate(6.472 10.858)">
+                                                                    <g id="Group_19034" data-name="Group 19034"
+                                                                        transform="translate(0)">
+                                                                        <path id="Path_16846" data-name="Path 16846"
+                                                                            d="M158.55,151a7.55,7.55,0,1,0,7.55,7.55A7.559,7.559,0,0,0,158.55,151Zm2.92,7.234-3.236,3.236a1.078,1.078,0,0,1-1.525,0l-1.079-1.079a1.079,1.079,0,0,1,1.525-1.525l.316.316,2.473-2.473a1.079,1.079,0,1,1,1.525,1.525Z"
+                                                                            transform="translate(-151 -151)"
+                                                                            fill="#fff" />
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </svg>
