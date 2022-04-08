@@ -24,6 +24,8 @@ $(function () {
   // Provider Profile
   const navpillCarousel = $(".navpills-carousel");
 
+  // Choose Login Type
+  const selectLoginTypeButtons = $(".selectlogin-button");
   // Enable Tootips Bootstrap
   const tooltipTriggerList = [
     ...document.querySelectorAll('[data-bs-toggle="tooltip"]'),
@@ -234,19 +236,25 @@ $(function () {
   */
   // (Order New Cons)  1 - Handle Sumbit to redirect user
   if (orderNewConSumbitButton.length) {
+    let filesName = [
+      "new-consultation",
+      "instant-consultation",
+      "order-consultation",
+    ]; // This filesname var will redirect to success when user submit
     orderNewConSumbitButton.click(function (e) {
-      if (location.href.includes("new-consultation.html")) {
-        e.preventDefault();
-        let redirectURL = location.href.replace(
-          "new-consultation.html",
-          "success-sent.html"
-        );
-        // redirect to success page
-        location.assign(redirectURL);
-      } else {
-        console.log("g");
-        return true;
-      }
+      filesName.forEach((name) => {
+        if (location.href.includes(`${name.trim()}.html`)) {
+          e.preventDefault();
+          let redirectURL = location.href.replace(
+            `${name.trim()}.html`,
+            "success-sent.html"
+          );
+          // redirect to success page
+          location.assign(redirectURL);
+        } else {
+          return true;
+        }
+      });
     });
   }
 
@@ -271,6 +279,33 @@ $(function () {
         .siblings()
         .find(".nav-link")
         .removeClass("active");
+    });
+  }
+
+  /* 
+    - Handle Choose Login Type Links
+  */
+  if (selectLoginTypeButtons.length) {
+    selectLoginTypeButtons.each(function () {
+      // Set default link to default active button
+      if ($(this).hasClass("active")) {
+        $(this).wrap(`<a href="${$(this).data("logintype-link")}"></a>`);
+      }
+
+      $(this).click(function () {
+        let link = $(this).data("logintype-link");
+        // if parent is Link in sibling , remove this link only without inner
+        if ($(this).siblings().is("a")) {
+          $(this).siblings().find(".selectlogin-button").unwrap();
+        }
+
+        // Toggle active link
+        $(this).siblings().removeClass("active");
+        $(this).addClass("active");
+
+        // Wrap this element by Link
+        $(this).wrap(`<a href="${link}"></a>`);
+      });
     });
   }
 
