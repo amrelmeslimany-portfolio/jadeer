@@ -259,7 +259,7 @@ $(function () {
     navpillCarousel.owlCarousel({
       autoWidth: true,
       rtl: siteLanguage === "rtl" ? true : false,
-      margin: 25,
+      margin: 30,
       dots: false,
     });
 
