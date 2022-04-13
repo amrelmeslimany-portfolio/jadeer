@@ -12,6 +12,8 @@ $(function () {
   const localizationSettingsMenu = $("#main-header .localization-settings");
   const offcanvasBody = $("#main-header .offcanvas .offcanvas-body");
   const tourguideWrap = $(".tourguide-wrap");
+  const imgPreviewWrap = $(".img-upload-wrap");
+  const filesUploadWrap = $(".fileupload-wrap");
 
   // Home Vars
   const videoWrapCarousel = $(".video-carousel");
@@ -24,6 +26,12 @@ $(function () {
   // Provider Profile
   const navpillCarousel = $(".navpills-carousel");
 
+  // Edit profile page
+  const readonlyInputs = $(".readonly-input");
+  const commentsCarousel = $(".comments-carousel");
+
+  // My orders page
+  const orderNavpills = $(".orderspills-carousel");
   // Choose Login Type
   const selectLoginTypeButtons = $(".selectlogin-button");
   // Enable Tootips Bootstrap
@@ -106,6 +114,7 @@ $(function () {
 
   // 3 -- Init global plugins
   // 3.1 -- AOS plugin (Scroll Animation)
+  //
   AOS.init({
     mirror: true,
   });
@@ -136,6 +145,52 @@ $(function () {
     });
   }
 
+  // 3.4 -- Img Upload View
+  if (imgPreviewWrap.length) {
+    imgPreviewWrap.each(function () {
+      let [imgPreview, imgActions, imgInput] = [
+        $(this).find(".img-upload-preview"),
+        $(this).find(".img-upload-actions"),
+        $(this).find(".img-upload-input"),
+      ];
+      $(this).imgPreview({
+        imgPreview,
+        imgActions,
+        imgInput,
+      });
+    });
+  }
+
+  // 3.5 -- Files upload
+  if (filesUploadWrap.length) {
+    filesUploadWrap.each(function () {
+      const input = $(this).find(".uploadinput");
+      const altInput = $(this).find(".customed-uploadinput");
+
+      // On click on alt input , direct click to original input
+      altInput.click(() => input.click());
+
+      // Handle input change
+      input.change(function ({ target }) {
+        let { files } = target;
+
+        // If user select file
+        if (files && files.length) {
+          let { name } = files[0];
+          let textTag = altInput.find(".text");
+
+          // Change text to Filename text
+          textTag.addClass("text-black");
+          textTag.text(name);
+        }
+      });
+    });
+  }
+
+  // 3.6 -- Star Rating
+  if ($(".rating-stars").length) {
+    $(".rating-stars .stars").rating(".stars");
+  }
   // In Mobile Screen and tablets
   handleNavbarResponsive();
   $(window).on("resize", () => {
@@ -271,15 +326,114 @@ $(function () {
       dots: false,
     });
 
-    navpillCarousel.find(".nav-link").click(function () {
-      $(this).addClass("active");
-      $(this)
-        .parent()
-        .parent()
-        .siblings()
-        .find(".nav-link")
-        .removeClass("active");
+    toggleActivePills(navpillCarousel);
+  }
+
+  // My orders page carousel
+  if (orderNavpills.length) {
+    orderNavpills.owlCarousel({
+      items: 3,
+      rtl: siteLanguage === "rtl" ? true : false,
+      margin: 30,
+      dots: false,
+      nav: false,
+      responsive: {
+        0: {
+          autoWidth: true,
+          startPosition: 1,
+          center: true,
+          loop: true,
+        },
+        992: {
+          loop: false,
+          startPosition: 0,
+          center: false,
+          autoWidth: false,
+          items: 3,
+        },
+      },
     });
+    toggleActivePills(orderNavpills);
+  }
+  /* 
+    - Edit Profile Page
+    1 - When click on edit button
+    2 - Comments Carousel
+  */
+
+  //  1 - When click on edit button
+  if (readonlyInputs.length) {
+    readonlyInputs.each(function () {
+      const that = $(this);
+      const editBTN = that.find(".editinput img");
+
+      editBTN.click(function () {
+        const input = that.find("input");
+        const inputVAL = input.val();
+        const thisBTN = $(this);
+        input.attr("readonly", false);
+        input[0].setSelectionRange(0, inputVAL.length);
+        input.focus();
+        that.addClass("bg-paper");
+
+        thisBTN.hide(200, function () {
+          that
+            .find(".editinput")
+            .append(
+              `<i class="fas fa-times text-danger fs-1 align-text-top remove-newvalue"></i>`
+            );
+
+          // When remove the new edit value
+          $(".remove-newvalue").click(function () {
+            input.attr("readonly", true);
+            input.blur();
+            that.removeClass("bg-paper");
+            input.val(inputVAL);
+            $(this).hide(200, function () {
+              $(this).remove();
+
+              editBTN.show(200);
+            });
+          });
+        });
+      });
+    });
+  }
+
+  //   2 - Comments Carousel
+  if (commentsCarousel.length) {
+    commentsCarousel.owlCarousel({
+      items: 1,
+      nav: true,
+      dots: false,
+      rtl: siteLanguage === "rtl" ? true : false,
+      margin: 30,
+      navText: [
+        `
+        <i class="fas  fa-chevron-${
+          siteLanguage === "rtl" ? "right" : "left"
+        } fs-3 text-black-50"></i>     
+        `,
+        `
+        <i class="fas  fa-chevron-${
+          siteLanguage === "rtl" ? "left" : "right"
+        } fs-3 text-black-50"></i>    
+        `,
+      ],
+
+      onInitialized: changeNavPlace,
+    });
+
+    function changeNavPlace() {
+      let owlNav = $(".owl-nav");
+      let navigationText = $(".navigations-rating-list .text");
+      if (owlNav.length) {
+        let prev = owlNav.find(".owl-prev").addClass("btn");
+        let next = owlNav.find(".owl-next").addClass("btn");
+        navigationText.before(prev);
+        navigationText.after(next);
+      }
+    }
   }
 
   /* 
@@ -329,5 +483,17 @@ $(function () {
 
       serviceBox.height(serviceBoxHeight + "px");
     }
+  }
+
+  function toggleActivePills(navpillCarousel) {
+    navpillCarousel.find(".nav-link").click(function () {
+      $(this).addClass("active");
+      $(this)
+        .parent()
+        .parent()
+        .siblings()
+        .find(".nav-link")
+        .removeClass("active");
+    });
   }
 });
