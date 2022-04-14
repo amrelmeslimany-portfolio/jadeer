@@ -25,6 +25,7 @@ $(function () {
 
   // Provider Profile
   const navpillCarousel = $(".navpills-carousel");
+  const addNewDateBTN = $(".addnew-appointment-btn");
 
   // Edit profile page
   const readonlyInputs = $(".readonly-input");
@@ -316,9 +317,13 @@ $(function () {
   /* 
     - Service provider Profile
     1 - Handle Nav pills carousel
+    2 - show add new date when date nap button active
   */
   // 1 - Handle Nav pills carousel
   if (navpillCarousel.length) {
+    // Default hide addnewdate button
+    addNewDateBTN.hide(1);
+
     navpillCarousel.owlCarousel({
       autoWidth: true,
       rtl: siteLanguage === "rtl" ? true : false,
@@ -326,7 +331,13 @@ $(function () {
       dots: false,
     });
 
-    toggleActivePills(navpillCarousel);
+    toggleActivePills(navpillCarousel, function (button) {
+      if (button.hasClass("mydates")) {
+        addNewDateBTN.show(100);
+      } else {
+        addNewDateBTN.hide(100);
+      }
+    });
   }
 
   // My orders page carousel
@@ -485,8 +496,11 @@ $(function () {
     }
   }
 
-  function toggleActivePills(navpillCarousel) {
+  function toggleActivePills(navpillCarousel, fn = null) {
     navpillCarousel.find(".nav-link").click(function () {
+      if (fn) {
+        fn($(this));
+      }
       $(this).addClass("active");
       $(this)
         .parent()
