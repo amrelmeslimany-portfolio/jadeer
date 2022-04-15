@@ -30,6 +30,7 @@ $(function () {
   // Edit profile page
   const readonlyInputs = $(".readonly-input");
   const commentsCarousel = $(".comments-carousel");
+  const tagsForm = $(".tags-form");
 
   // My orders page
   const orderNavpills = $(".orderspills-carousel");
@@ -370,6 +371,7 @@ $(function () {
     - Edit Profile Page
     1 - When click on edit button
     2 - Comments Carousel
+    3 - handle tags
   */
 
   //  1 - When click on edit button
@@ -379,11 +381,12 @@ $(function () {
       const editBTN = that.find(".editinput img");
 
       editBTN.click(function () {
-        const input = that.find("input");
+        const input = that.find("input,textarea");
         const inputVAL = input.val();
         const thisBTN = $(this);
         input.attr("readonly", false);
-        input[0].setSelectionRange(0, inputVAL.length);
+        input[0].select();
+
         input.focus();
         that.addClass("bg-paper");
 
@@ -411,7 +414,7 @@ $(function () {
     });
   }
 
-  //   2 - Comments Carousel
+  //  2 - Comments Carousel
   if (commentsCarousel.length) {
     commentsCarousel.owlCarousel({
       items: 1,
@@ -445,6 +448,15 @@ $(function () {
         navigationText.after(next);
       }
     }
+  }
+
+  // // 3 - handle tags
+  if (tagsForm.length) {
+    const tagsList = $(".tags-list");
+
+    tagsForm.tags({
+      tagsList,
+    });
   }
 
   /* 
