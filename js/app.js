@@ -34,6 +34,9 @@ $(function () {
 
   // My orders page
   const orderNavpills = $(".orderspills-carousel");
+
+  // Contact Us page
+  const messageTitleSelect = $("#messageTitleSelectID");
   // Choose Login Type
   const selectLoginTypeButtons = $(".selectlogin-button");
   // Enable Tootips Bootstrap
@@ -192,6 +195,25 @@ $(function () {
   // 3.6 -- Star Rating
   if ($(".rating-stars").length) {
     $(".rating-stars .stars").rating(".stars");
+  }
+
+  // 3.7 -- Notify alerts
+
+  if ($(".accept-btn").length || $(".reject-btn").length) {
+    toastr.options = {
+      positionClass: "toast-top-full-width",
+      rtl: siteLanguage === "rtl" ? true : false,
+    };
+
+    $(".accept-btn").click(function () {
+      toastr.options.toastClass = "toast bg-success shadow opacity-100";
+      toastr.success("تم القبول بنجاح");
+    });
+
+    $(".reject-btn").click(function () {
+      toastr.options.toastClass = "toast bg-danger shadow opacity-100";
+      toastr.success("تم الرفض بنجاح");
+    });
   }
   // In Mobile Screen and tablets
   handleNavbarResponsive();
@@ -450,7 +472,7 @@ $(function () {
     }
   }
 
-  // // 3 - handle tags
+  //  3 - handle tags
   if (tagsForm.length) {
     const tagsList = $(".tags-list");
 
@@ -483,6 +505,28 @@ $(function () {
         // Wrap this element by Link
         $(this).wrap(`<a href="${link}"></a>`);
       });
+    });
+  }
+
+  /*
+    - Contact Us page 
+    1 -- handle when select other...
+  */
+
+  if (messageTitleSelect.length) {
+    messageTitleSelect.on("change", function (e) {
+      let val = $(this).val();
+
+      if (val === "other") {
+        $(this)
+          .after(`<input type="text" name="messageTitle" id="messageTitleTextID"
+        class="form-control text-black display-omd py-3 mt-3" placeholder="عنوان الرسالة">`);
+      } else {
+        $("#messageTitleTextID").length &&
+          $("#messageTitleTextID").slideUp(200, function () {
+            $(this).remove();
+          });
+      }
     });
   }
 

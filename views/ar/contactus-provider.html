@@ -265,8 +265,15 @@
                                     class="form-label text-light-secondary-dark mb-4 display-omd">
                                     عنوان الرسالة
                                 </label>
-                                <input type="text" name="messageTitle" id="messageTitleID"
-                                    class="form-control text-black display-omd py-3" placeholder="عنوان الرسالة">
+                                <!-- Dont change id name  because used in js -->
+                                <select name="messageTitle" class="form-select text-black display-omd py-3"
+                                    id="messageTitleSelectID">
+                                    <option value="1">عنوان الرسالة 1</option>
+                                    <option value="2">عنوان الرسالة 2</option>
+                                    <!-- Dont change other word because it's used at js -->
+                                    <option value="other">أخر...</option>
+                                </select>
+
                             </div>
 
                             <div>
