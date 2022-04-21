@@ -9,6 +9,7 @@
 $(function () {
   // Global Const Variabls
   const siteLanguage = $("body").css("direction");
+  const loader = $(".loading-wrap");
   const localizationSettingsMenu = $("#main-header .localization-settings");
   const offcanvasBody = $("#main-header .offcanvas .offcanvas-body");
   const tourguideWrap = $(".tourguide-wrap");
@@ -59,7 +60,7 @@ $(function () {
   */
 
   // 1 -- Handle Loading page
-  $(".loading-wrap").slideUp(200, function () {
+  loader.slideUp(200, function () {
     $(this).remove();
   });
   // 2 -- Handle Tourguide
@@ -73,9 +74,15 @@ $(function () {
     const tourguideActions = tourguideWrap.find(
       ".tourguide-message .tourguide-actions"
     );
+
+    // Get Path of assets
+    const pathStyles = $("head").find('link[rel="stylesheet"]').attr("href");
+    const assetsPath = pathStyles.slice(0, pathStyles.indexOf("/css/") + 1);
+
     const welcomeSound = new Audio(
-      "../../assets/audios/tourguide-welcome-sound.mp3"
+      `${assetsPath}assets/audios/tourguide-welcome-sound.mp3`
     );
+
     // remove human
     tourguideHuman.slideUp(1);
     // Init tourguide
@@ -207,12 +214,20 @@ $(function () {
 
     $(".accept-btn").click(function () {
       toastr.options.toastClass = "toast bg-success shadow opacity-100";
-      toastr.success("تم القبول بنجاح");
+      if (siteLanguage === "rtl") {
+        toastr.success("تم القبول بنجاح");
+      } else {
+        toastr.success("Accepted Done!");
+      }
     });
 
     $(".reject-btn").click(function () {
       toastr.options.toastClass = "toast bg-danger shadow opacity-100";
-      toastr.success("تم الرفض بنجاح");
+      if (siteLanguage === "rtl") {
+        toastr.success("تم الرفض بنجاح");
+      } else {
+        toastr.success("Rejected Done!");
+      }
     });
   }
   // In Mobile Screen and tablets
@@ -520,7 +535,9 @@ $(function () {
       if (val === "other") {
         $(this)
           .after(`<input type="text" name="messageTitle" id="messageTitleTextID"
-        class="form-control text-black display-omd py-3 mt-3" placeholder="عنوان الرسالة">`);
+        class="form-control text-black display-omd py-3 mt-3" placeholder="${
+          siteLanguage === "rtl" ? "عنوان الرسالة" : "Message Title"
+        }">`);
       } else {
         $("#messageTitleTextID").length &&
           $("#messageTitleTextID").slideUp(200, function () {
