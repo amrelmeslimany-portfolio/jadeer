@@ -65,6 +65,7 @@ $(function () {
   });
   // 2 -- Handle Tourguide
   if (tourguideWrap.length) {
+    const tourguideDataAttr = $("[data-tourguide]");
     const tourguideButton = tourguideWrap.find(".tourguide-button");
     const tourguideHuman = tourguideWrap.find(".whole-human");
     const tourguideMessageWrap = tourguideWrap.find(".tourguide-message");
@@ -74,6 +75,7 @@ $(function () {
     const tourguideActions = tourguideWrap.find(
       ".tourguide-message .tourguide-actions"
     );
+    const closeBTN = tourguideActions.find(".close");
 
     // Get Path of assets
     const pathStyles = $("head").find('link[rel="stylesheet"]').attr("href");
@@ -82,6 +84,9 @@ $(function () {
     const welcomeSound = new Audio(
       `${assetsPath}assets/audios/tourguide-welcome-sound.mp3`
     );
+
+    let counter = 0;
+    let isPlaying = true;
 
     // remove human
     tourguideHuman.slideUp(1);
@@ -113,13 +118,82 @@ $(function () {
       });
 
       // if user click "close tourguide"
-      tourguideActions.find(".close").click(function () {
+      closeBTN.click(function () {
+        if (isPlaying) {
+          isPlaying = false;
+        }
         tourguideMessageWrap.removeClass("show");
         tourguideMessageWrap.addClass("pointer-event-none");
         tourguideHuman.delay(250).slideUp(200, () => {
           // show init button
           tourguideButton.slideDown(200);
         });
+      });
+
+      // When click start
+      tourguideActions.find(".start").click(function () {
+        let that = $(this);
+        let messageContent = tourguideMessage.find(".simplebar-content");
+        if (tourguideDataAttr.length) {
+          isPlaying = true;
+          messageContent.text(
+            siteLanguage === "rtl"
+              ? "المساعد يعمل الان..."
+              : "Is Playing Now..."
+          );
+          $(this).hide();
+
+          playAudio();
+        } else {
+          messageContent.text(
+            siteLanguage === "rtl"
+              ? "لايوجد محتوى للشرح الان..."
+              : "Sorry, No content to clear now..."
+          );
+        }
+
+        function playAudio() {
+          if (counter < tourguideDataAttr.length && isPlaying) {
+            let element = tourguideDataAttr[counter];
+            let audio = new Audio(JSON.parse(element.dataset.tourguide).audio);
+
+            $("body , html").animate({
+              scrollTop: $(element).offset().top - 20,
+            });
+
+            setTimeout(() => {
+              $(element).addClass("current");
+
+              audio.play();
+            }, 1000);
+
+            closeBTN.click(function () {
+              audio.pause();
+              $(element).removeClass("current");
+              that.show();
+
+              messageContent.text(
+                siteLanguage === "rtl"
+                  ? "تم اغلاق المساعد..."
+                  : "Assistant is closed..."
+              );
+            });
+
+            audio.onended = () => {
+              $(element).removeClass("current");
+              counter++;
+              setTimeout(playAudio, 1500);
+            };
+          } else {
+            isPlaying = false;
+            that.show();
+            counter = 0;
+
+            messageContent.text(
+              siteLanguage === "rtl" ? "تم الانتهاء..." : "Finished..."
+            );
+          }
+        }
       });
     }
   }
