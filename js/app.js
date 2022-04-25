@@ -190,7 +190,7 @@ $(function () {
             counter = 0;
 
             messageContent.text(
-              siteLanguage === "rtl" ? "تم الانتهاء..." : "Finished..."
+              siteLanguage === "rtl" ? "تم الانتهاء!" : "Finished!"
             );
           }
         }
