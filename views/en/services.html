@@ -270,176 +270,200 @@
                         </a>
 
                         <!-- Sidebar Filter Settings -->
-                        <div class="pt-6 pb-2 border rounded-3 fl-option-content">
-                            <section class="px-6 px-xl-8">
-                                <h4 data-aos="zoom-in" data-aos-once="true">
-                                    Consultation subject
-                                </h4>
+                        <div class="position-relative">
+                            <!-- During Loading , Hide element with "preloader-filter-sidebar" class -->
+                            <div
+                                class="preloader-filter-sidebar d-flex flex-column  align-items-center bg-white position-absolute top-0 bottom-0 h-100 w-100">
 
-                                <span class="title-underline-hr mt-5 mb-4"></span>
-                            </section>
-                            <ul class="list-group list-group-flush mb-0">
-                                <li data-aos="fade-right" data-aos-once="true"
-                                    class="list-group-item label-text text-light-secondary-dark display-omd  py-3 px-6 px-xl-8">
-                                    <input class="form-check-input me-3 mt-n1 align-middle" type="checkbox" value="1">
-                                    personal status
-                                </li>
-                                <li data-aos="fade-right" data-aos-once="true"
-                                    class="list-group-item label-text text-light-secondary-dark display-omd  py-3 px-6 px-xl-8">
-                                    <input class="form-check-input me-3 mt-n1 align-middle" type="checkbox" value="2">
-                                    criminal </li>
-                                <li data-aos="fade-right" data-aos-once="true"
-                                    class="list-group-item label-text text-light-secondary-dark display-omd  py-3 px-6 px-xl-8">
-                                    <input class="form-check-input me-3 mt-n1 align-middle" type="checkbox" value="3">
-                                    my rights
-                                </li>
-                                <li data-aos="fade-right" data-aos-once="true"
-                                    class="list-group-item label-text text-light-secondary-dark display-omd  py-3 px-6 px-xl-8">
-                                    <input class="form-check-input me-3 mt-n1 align-middle" type="checkbox" value="4">
-                                    my woks
-                                </li>
-                                <li data-aos="fade-right" data-aos-once="true"
-                                    class="list-group-item label-text text-light-secondary-dark display-omd  py-3 px-6 px-xl-8">
-                                    <input class="form-check-input me-3 mt-n1 align-middle" type="checkbox" value="5">
-                                    commercial
-                                </li>
-                                <li data-aos="fade-right" data-aos-once="true"
-                                    class="list-group-item label-text text-light-secondary-dark display-omd  py-3 px-6 px-xl-8">
-                                    <input class="form-check-input me-3 mt-n1 align-middle" type="checkbox" value="6">
-                                    administrative
-                                </li>
-                                <li data-aos="fade-right" data-aos-once="true"
-                                    class="list-group-item label-text text-light-secondary-dark display-omd  py-3 px-6 px-xl-8">
-                                    <input class="form-check-input me-3 mt-n1 align-middle" type="checkbox" value="7">
-                                    my passage
-                                </li>
-                                <li data-aos="fade-right" data-aos-once="true"
-                                    class="list-group-item label-text text-light-secondary-dark display-omd  py-3 px-6 px-xl-8">
-                                    <input class="form-check-input me-3 mt-n1 align-middle" type="checkbox" value="8">
-                                    companies and businesses
-                                </li>
-                                <li data-aos="fade-right" data-aos-once="true"
-                                    class="list-group-item label-text text-light-secondary-dark display-omd  py-3 px-6 px-xl-8">
-                                    <input class="form-check-input me-3 mt-n1 align-middle" type="checkbox" value="9">
-                                    contracts and agreements
-                                </li>
-                                <li data-aos="fade-right" data-aos-once="true"
-                                    class="list-group-item label-text text-light-secondary-dark display-omd  py-3 px-6 px-xl-8">
-                                    <input class="form-check-input me-3 mt-n1 align-middle" type="checkbox" value="10">
-                                    companies
-                                </li>
-                                <li data-aos="fade-right" data-aos-once="true"
-                                    class="list-group-item label-text text-light-secondary-dark display-omd  py-3 px-6 px-xl-8">
-                                    <input class="form-check-input me-3 mt-n1 align-middle" type="checkbox" value="11">
-                                    execution claims
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="pt-6 pb-2 border rounded-3 fl-option-content">
-                            <section class="px-6 px-xl-8">
-                                <h4 data-aos="zoom-in" data-aos-once="true">
-                                    By rating
-                                </h4>
+                                <img src="../../assets/img/filterLoader.svg" width="200" alt="loader">
+                                <span class="text-primary display-omd">Loading...</span>
 
-                                <span class="title-underline-hr mt-5 mb-4"></span>
-                            </section>
-                            <div class="d-flex justify-content-between gap-2 py-3 px-6 px-xl-8">
-                                <div class="form-check" data-aos="zoom-in" data-aos-once="true">
-                                    <input class="form-check-input me-3" type="radio" name="ratingFilter"
-                                        id="highestRaring" checked>
-                                    <label class="form-check-label label-text text-light-secondary-dark display-omd"
-                                        for="highestRaring">
-                                        highest rated
-                                    </label>
-                                </div>
-                                <div data-aos="zoom-in" data-aos-once="true" class="form-check pe-xl-4">
-                                    <input class="form-check-input me-3" type="radio" name="ratingFilter"
-                                        id="lowerRating">
-                                    <label class="form-check-label label-text text-light-secondary-dark display-omd"
-                                        for="lowerRating">
-                                        least rated
-                                    </label>
+                            </div>
+                            <div class="pt-6 pb-2 border rounded-3 fl-option-content">
+                                <section class="px-6 px-xl-8">
+                                    <h4 data-aos="zoom-in" data-aos-once="true">
+                                        Consultation subject
+                                    </h4>
+
+                                    <span class="title-underline-hr mt-5 mb-4"></span>
+                                </section>
+                                <ul class="list-group list-group-flush mb-0">
+                                    <li data-aos="fade-right" data-aos-once="true"
+                                        class="list-group-item label-text text-light-secondary-dark display-omd  py-3 px-6 px-xl-8">
+                                        <input class="form-check-input me-3 mt-n1 align-middle" type="checkbox"
+                                            value="1">
+                                        personal status
+                                    </li>
+                                    <li data-aos="fade-right" data-aos-once="true"
+                                        class="list-group-item label-text text-light-secondary-dark display-omd  py-3 px-6 px-xl-8">
+                                        <input class="form-check-input me-3 mt-n1 align-middle" type="checkbox"
+                                            value="2">
+                                        criminal </li>
+                                    <li data-aos="fade-right" data-aos-once="true"
+                                        class="list-group-item label-text text-light-secondary-dark display-omd  py-3 px-6 px-xl-8">
+                                        <input class="form-check-input me-3 mt-n1 align-middle" type="checkbox"
+                                            value="3">
+                                        my rights
+                                    </li>
+                                    <li data-aos="fade-right" data-aos-once="true"
+                                        class="list-group-item label-text text-light-secondary-dark display-omd  py-3 px-6 px-xl-8">
+                                        <input class="form-check-input me-3 mt-n1 align-middle" type="checkbox"
+                                            value="4">
+                                        my woks
+                                    </li>
+                                    <li data-aos="fade-right" data-aos-once="true"
+                                        class="list-group-item label-text text-light-secondary-dark display-omd  py-3 px-6 px-xl-8">
+                                        <input class="form-check-input me-3 mt-n1 align-middle" type="checkbox"
+                                            value="5">
+                                        commercial
+                                    </li>
+                                    <li data-aos="fade-right" data-aos-once="true"
+                                        class="list-group-item label-text text-light-secondary-dark display-omd  py-3 px-6 px-xl-8">
+                                        <input class="form-check-input me-3 mt-n1 align-middle" type="checkbox"
+                                            value="6">
+                                        administrative
+                                    </li>
+                                    <li data-aos="fade-right" data-aos-once="true"
+                                        class="list-group-item label-text text-light-secondary-dark display-omd  py-3 px-6 px-xl-8">
+                                        <input class="form-check-input me-3 mt-n1 align-middle" type="checkbox"
+                                            value="7">
+                                        my passage
+                                    </li>
+                                    <li data-aos="fade-right" data-aos-once="true"
+                                        class="list-group-item label-text text-light-secondary-dark display-omd  py-3 px-6 px-xl-8">
+                                        <input class="form-check-input me-3 mt-n1 align-middle" type="checkbox"
+                                            value="8">
+                                        companies and businesses
+                                    </li>
+                                    <li data-aos="fade-right" data-aos-once="true"
+                                        class="list-group-item label-text text-light-secondary-dark display-omd  py-3 px-6 px-xl-8">
+                                        <input class="form-check-input me-3 mt-n1 align-middle" type="checkbox"
+                                            value="9">
+                                        contracts and agreements
+                                    </li>
+                                    <li data-aos="fade-right" data-aos-once="true"
+                                        class="list-group-item label-text text-light-secondary-dark display-omd  py-3 px-6 px-xl-8">
+                                        <input class="form-check-input me-3 mt-n1 align-middle" type="checkbox"
+                                            value="10">
+                                        companies
+                                    </li>
+                                    <li data-aos="fade-right" data-aos-once="true"
+                                        class="list-group-item label-text text-light-secondary-dark display-omd  py-3 px-6 px-xl-8">
+                                        <input class="form-check-input me-3 mt-n1 align-middle" type="checkbox"
+                                            value="11">
+                                        execution claims
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pt-6 pb-2 border rounded-3 fl-option-content">
+                                <section class="px-6 px-xl-8">
+                                    <h4 data-aos="zoom-in" data-aos-once="true">
+                                        By rating
+                                    </h4>
+
+                                    <span class="title-underline-hr mt-5 mb-4"></span>
+                                </section>
+                                <div class="d-flex justify-content-between gap-2 py-3 px-6 px-xl-8">
+                                    <div class="form-check" data-aos="zoom-in" data-aos-once="true">
+                                        <input class="form-check-input me-3" type="radio" name="ratingFilter"
+                                            id="highestRaring" checked>
+                                        <label class="form-check-label label-text text-light-secondary-dark display-omd"
+                                            for="highestRaring">
+                                            highest rated
+                                        </label>
+                                    </div>
+                                    <div data-aos="zoom-in" data-aos-once="true" class="form-check pe-xl-4">
+                                        <input class="form-check-input me-3" type="radio" name="ratingFilter"
+                                            id="lowerRating">
+                                        <label class="form-check-label label-text text-light-secondary-dark display-omd"
+                                            for="lowerRating">
+                                            least rated
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="pt-6 pb-2 border rounded-3 fl-option-content">
-                            <section class="px-6 px-xl-8">
-                                <h4 data-aos="zoom-in" data-aos-once="true">
-                                    By Gender
-                                </h4>
+                            <div class="pt-6 pb-2 border rounded-3 fl-option-content">
+                                <section class="px-6 px-xl-8">
+                                    <h4 data-aos="zoom-in" data-aos-once="true">
+                                        By Gender
+                                    </h4>
 
-                                <span class="title-underline-hr mt-5 mb-4"></span>
-                            </section>
-                            <div class="d-flex justify-content-between gap-2 py-3 px-6 px-xl-8">
-                                <div class="form-check" data-aos="zoom-in" data-aos-once="true">
-                                    <input class="form-check-input me-3" type="radio" name="genderFilter" id="maleID"
-                                        checked value="male">
-                                    <label class="form-check-label label-text text-light-secondary-dark display-omd"
-                                        for="maleID">
-                                        male
-                                    </label>
-                                </div>
-                                <div class="form-check pe-12 me-xl-9 me-4" data-aos="zoom-in" data-aos-once="true">
-                                    <input class="form-check-input me-3" type="radio" value="female" name="genderFilter"
-                                        id="femaleID">
-                                    <label class="form-check-label label-text text-light-secondary-dark display-omd"
-                                        for="femaleID">
-                                        female
-                                    </label>
+                                    <span class="title-underline-hr mt-5 mb-4"></span>
+                                </section>
+                                <div class="d-flex justify-content-between gap-2 py-3 px-6 px-xl-8">
+                                    <div class="form-check" data-aos="zoom-in" data-aos-once="true">
+                                        <input class="form-check-input me-3" type="radio" name="genderFilter"
+                                            id="maleID" checked value="male">
+                                        <label class="form-check-label label-text text-light-secondary-dark display-omd"
+                                            for="maleID">
+                                            male
+                                        </label>
+                                    </div>
+                                    <div class="form-check pe-12 me-xl-9 me-4" data-aos="zoom-in" data-aos-once="true">
+                                        <input class="form-check-input me-3" type="radio" value="female"
+                                            name="genderFilter" id="femaleID">
+                                        <label class="form-check-label label-text text-light-secondary-dark display-omd"
+                                            for="femaleID">
+                                            female
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="pt-6 pb-2 border rounded-3 fl-option-content">
-                            <section class="px-6 px-xl-8">
-                                <h4 data-aos="zoom-in" data-aos-once="true">
-                                    Status </h4>
+                            <div class="pt-6 pb-2 border rounded-3 fl-option-content">
+                                <section class="px-6 px-xl-8">
+                                    <h4 data-aos="zoom-in" data-aos-once="true">
+                                        Status </h4>
 
-                                <span class="title-underline-hr mt-5 mb-4"></span>
-                            </section>
-                            <div class="d-flex justify-content-between gap-2 py-3 px-6 px-xl-8">
-                                <div class="form-check" data-aos="zoom-in" data-aos-once="true">
-                                    <input class="form-check-input me-3" type="radio" name="statusFilter" id="free1"
-                                        checked value="male">
-                                    <label class="form-check-label label-text text-light-secondary-dark display-omd"
-                                        for="free1">
-                                        available with date
-                                    </label>
-                                </div>
-                                <div data-aos="zoom-in" data-aos-once="true" class="form-check me-xl-10 me-5">
-                                    <input class="form-check-input me-3" type="radio" value="female" name="statusFilter"
-                                        id="free2">
-                                    <label class="form-check-label label-text text-light-secondary-dark display-omd"
-                                        for="free2">
-                                        available now
-                                    </label>
+                                    <span class="title-underline-hr mt-5 mb-4"></span>
+                                </section>
+                                <div class="d-flex justify-content-between gap-2 py-3 px-6 px-xl-8">
+                                    <div class="form-check" data-aos="zoom-in" data-aos-once="true">
+                                        <input class="form-check-input me-3" type="radio" name="statusFilter" id="free1"
+                                            checked value="male">
+                                        <label class="form-check-label label-text text-light-secondary-dark display-omd"
+                                            for="free1">
+                                            available with date
+                                        </label>
+                                    </div>
+                                    <div data-aos="zoom-in" data-aos-once="true" class="form-check me-xl-10 me-5">
+                                        <input class="form-check-input me-3" type="radio" value="female"
+                                            name="statusFilter" id="free2">
+                                        <label class="form-check-label label-text text-light-secondary-dark display-omd"
+                                            for="free2">
+                                            available now
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="pt-6 pb-2 border rounded-3 fl-option-content">
-                            <section class="px-6 px-xl-8">
-                                <h4 data-aos="zoom-in" data-aos-once="true">
-                                    Communication nature
-                                </h4>
+                            <div class="pt-6 pb-2 border rounded-3 fl-option-content">
+                                <section class="px-6 px-xl-8">
+                                    <h4 data-aos="zoom-in" data-aos-once="true">
+                                        Communication nature
+                                    </h4>
 
-                                <span class="title-underline-hr mt-5 mb-4"></span>
-                            </section>
-                            <ul class="list-group list-group-flush mb-0">
-                                <li data-aos="fade-right" data-aos-once="true"
-                                    class="list-group-item label-text text-light-secondary-dark display-omd  py-3 px-6 px-xl-8">
-                                    <input class="form-check-input me-3 mt-n1 align-middle" type="checkbox" value="1">
-                                    vision (live broadcast or recorded broadcast)
-                                </li>
-                                <li data-aos="fade-right" data-aos-once="true"
-                                    class="list-group-item label-text text-light-secondary-dark display-omd  py-3 px-6 px-xl-8">
-                                    <input class="form-check-input me-3 mt-n1 align-middle" type="checkbox" value="2">
-                                    audible (live broadcast or recorded broadcast)
-                                </li>
-                                <li data-aos="fade-right" data-aos-once="true"
-                                    class="list-group-item label-text text-light-secondary-dark display-omd  py-3 px-6 px-xl-8">
-                                    <input class="form-check-input me-3 mt-n1 align-middle" type="checkbox" value="3">
-                                    written
-                                </li>
-                            </ul>
+                                    <span class="title-underline-hr mt-5 mb-4"></span>
+                                </section>
+                                <ul class="list-group list-group-flush mb-0">
+                                    <li data-aos="fade-right" data-aos-once="true"
+                                        class="list-group-item label-text text-light-secondary-dark display-omd  py-3 px-6 px-xl-8">
+                                        <input class="form-check-input me-3 mt-n1 align-middle" type="checkbox"
+                                            value="1">
+                                        vision (live broadcast or recorded broadcast)
+                                    </li>
+                                    <li data-aos="fade-right" data-aos-once="true"
+                                        class="list-group-item label-text text-light-secondary-dark display-omd  py-3 px-6 px-xl-8">
+                                        <input class="form-check-input me-3 mt-n1 align-middle" type="checkbox"
+                                            value="2">
+                                        audible (live broadcast or recorded broadcast)
+                                    </li>
+                                    <li data-aos="fade-right" data-aos-once="true"
+                                        class="list-group-item label-text text-light-secondary-dark display-omd  py-3 px-6 px-xl-8">
+                                        <input class="form-check-input me-3 mt-n1 align-middle" type="checkbox"
+                                            value="3">
+                                        written
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </aside>
 
@@ -452,18 +476,24 @@
                                 </h4>
                                 <span class="title-line l1 bg-primary"></span>
                                 <span class="title-line l2 bg-warning"></span>
+
+                                <div class="alert alert-danger mt-3">
+                                    Alerts display here
+                                </div>
                             </div>
 
                             <!-- Services Card -->
-                            <div class="row gx-4 gy-6 mt-2">
-                                <!-- preloader -->
-                                <div class="col-12 preloader-filter">
-                                    <div class="d-flex flex-column justify-content-center align-items-center">
-                                        <img src="../../assets/img/filterLoader.svg" alt="loader">
-                                        <span class="text-primary display-omd">Loading...</span>
-                                    </div>
+                            <!-- During Loading , Hide element with "preloader-filter" class and remove "isLoading" class -->
+                            <div class="row gx-4 gy-6 mt-2 position-relative isLoading">
+
+                                <!-- Start preloader -->
+                                <div
+                                    class=" preloader-filter  d-flex flex-column  align-items-center bg-white position-absolute top-0 bottom-0 h-100">
+                                    <img src="../../assets/img/filterLoader.svg" alt="loader">
+                                    <span class="text-primary display-omd">Loading...</span>
                                 </div>
-                                <!-- preloader -->
+                                <!-- End preloader -->
+
                                 <div class="col-xxl-4 col-xl-6 col-lg-12 col-md-6">
                                     <a data-aos="fade-up" href="serviceprovider-profile.html"
                                         class="text-secondary-dark service-card d-block">
