@@ -36,6 +36,9 @@ $(function () {
   // My orders page
   const orderNavpills = $(".orderspills-carousel");
 
+  // chat
+  const chatBody = $(".chat-wrap .chat-body .simplebar-content-wrapper");
+  const chatForm = $(".chat-wrap .chat-footer form");
   // Contact Us page
   const messageTitleSelect = $("#messageTitleSelectID");
   // Choose Login Type
@@ -618,6 +621,24 @@ $(function () {
             $(this).remove();
           });
       }
+    });
+  }
+
+  /* 
+    - Chat
+    1 - handle auto scroll
+  */
+
+  if (chatForm.length) {
+    chatForm.on("submit", (e) => {
+      e.preventDefault();
+
+      // Add Post and Get requests here
+
+      // This is last code after data submited
+      chatBody.animate({
+        scrollTop: chatBody.prop("scrollHeight"),
+      });
     });
   }
 
