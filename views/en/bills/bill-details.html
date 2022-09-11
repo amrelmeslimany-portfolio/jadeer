@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>جدير - تفاصيل الفاتورة</title>
+    <title>Jadeer - Bill Details</title>
     <meta name="description" content="Jadeer" />
     <meta name="keywords" content="jadeer, جدير">
     <meta name="theme-color" content="#45a142">
@@ -18,10 +18,8 @@
     <!-- Fontawsome links -->
     <link rel="stylesheet" href="../../../css/libs/aos.css">
     <link rel="stylesheet" href="../../../css/libs/simplebar.css">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.datatables.net/v/bs5/dt-1.12.1/af-2.4.0/r-2.3.0/sp-2.0.2/datatables.min.css" />
-    <link rel="stylesheet" href="../../../css/libs/bootstrap.rtl.css">
-    <link rel="stylesheet" href="../../../css/style.rtl.css">
+    <link rel="stylesheet" href="../../../css/libs/bootstrap.css">
+    <link rel="stylesheet" href="../../../css/style.css">
 </head>
 
 <body>
@@ -29,7 +27,7 @@
     <!-- Loading page -->
     <div class="loading-wrap">
         <img src="../../../assets/img/logo-sm.png" width="100" alt="jadeer logo شعار جدير">
-        <h6 class="text-primary mt-3">جارى التحميل...</h6>
+        <h6 class="text-primary mt-3">Loading...</h6>
     </div>
 
     <!-- Content -->
@@ -39,7 +37,7 @@
             <div class="container">
                 <nav class="navbar navbar-expand-xl navbar-light bg-white border-bottom py-0">
                     <!-- Navbar Buttons -->
-                    <a href="index.html" class="navbar-brand">
+                    <a href="../index.html" class="navbar-brand">
                         <img src="../../../assets/img/logo-sm.png" alt="jadeer logo main" width="150">
                     </a>
                     <button class="navbar-toggler py-2 bg-primary border-0 order-1" type="button"
@@ -52,30 +50,30 @@
                     <div
                         class="localization-settings gap-2 ms-auto me-2 ms-xl-0 me-xl-0 order-xl-1 d-flex align-items-center">
                         <div class="dropdown order-xl-1 me-xxl-5">
-                            <button class="btn dropdown-toggle pb-3" type="button" id="languageDropdown"
+                            <button class="btn dropdown-toggle" type="button" id="languageDropdown"
                                 data-bs-toggle="dropdown">
-                                <img src="../../../assets/img/flags/ar.png" class="me-1"
-                                    alt="arabic العربيةاللغة language" width="28">
-                                عربي
-                                <i class="fas fa-chevron-down ms-1 align-bottom"></i>
+                                <img src="../../../assets/img/flags/en.png" class="me-1 align-top"
+                                    alt="english language" width="28">
+                                EN
+                                <i class="fas fa-chevron-down ms-1"></i>
                             </button>
 
                             <ul class="dropdown-menu py-0 border-0 mt-1" aria-labelledby="languageDropdown">
+
                                 <li>
                                     <span class="dropdown-item py-2 active">
-                                        <img class="me-2 " width="28" src="../../../assets/img/flags/ar.png"
-                                            alt="english language">
-                                        عربي
+                                        <img class="me-2 align-bottom" width="28" src="../../../assets/img/flags/en.png"
+                                            alt="EN language">
+                                        EN
                                     </span>
-
                                 </li>
-
                                 <li>
-                                    <a class="dropdown-item py-2" href="../../en/bills/bill-details.html">
-                                        <img class="me-2 " width="28" src="../../../assets/img/flags/en.png"
+                                    <a class="dropdown-item py-2" href="../../ar/bills/bill-details.html">
+                                        <img class="me-2 align-top" width="28" src="../../../assets/img/flags/ar.png"
                                             alt="arabic language">
-                                        الانجليزية
+                                        AR
                                     </a>
+
                                 </li>
                             </ul>
                         </div>
@@ -83,7 +81,7 @@
                             <button class="btn dropdown-toggle" type="button" id="curruncyDropdown"
                                 data-bs-toggle="dropdown">
                                 <span class="align-middle">KSA</span>
-                                <span class="align-middle">SAR - السعودية</span>
+                                <span class="align-middle">SAR - Saudia</span>
                                 <i class="fas fa-chevron-down ms-1 align-text-bottom"></i>
                             </button>
 
@@ -91,13 +89,13 @@
                                 <li>
                                     <a class="dropdown-item py-2" href="#">
                                         <span>KSA</span>
-                                        <span>SAR - السعودية</span>
+                                        <span>SAR - Saudia</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item py-2" href="#">
                                         <span>KSA</span>
-                                        <span>SAR - السعودية</span>
+                                        <span>SAR - Saudia</span>
                                     </a>
                                 </li>
                             </ul>
@@ -118,12 +116,12 @@
                                 class="features-list-buttons d-flex align-items-center justify-content-between flex-row-reverse flex-xl-row justify-content-xl-start mb-4 mb-xl-0 gap-3 gap-xxl-6 me-sm-3 ms-xl-auto ms-xxl-12 order-1">
                                 <div class="d-flex gap-2 gap-xxl-6">
                                     <!-- 
-                                            !! IF User not register display this
-    
-                                            <a href="login.html"
-                                            class="btn btn-primary text-nowrap rounded-3 bg-btn-hover white-hover shadow px-5 py-3">تسجيل
-                                            الدخول</a>                                        
-                                        -->
+                                        !! IF User not register display this
+
+                                        <a href="login.html"
+                                        class="btn btn-primary text-nowrap rounded-3 bg-btn-hover white-hover shadow px-5 py-3">Sign In
+                                        </a>                                        
+                                    -->
 
 
                                     <div class="align-self-center">
@@ -142,6 +140,7 @@
                                                 <span class="outline-animation"></span>
                                             </span>
 
+
                                             <!-- Notifiction Number -->
                                             <span
                                                 class="position-absolute rounded-circle top-30  translate-middle bg-danger text-white"
@@ -151,43 +150,44 @@
                                         </a>
                                     </div>
 
+
                                     <div class="dropdown myprofile-dropdown">
                                         <button
-                                            class="btn border py-3  border-primary rounded-3 text-primary dropdown-toggle"
+                                            class="btn border py-3 border-primary rounded-3 text-primary dropdown-toggle"
                                             type="button" data-bs-toggle="dropdown">
                                             <i class="fa-regular fa-user me-1"></i>
-                                            حسابي
+                                            Profile
                                         </button>
                                         <ul class="dropdown-menu py-0 border-0">
                                             <li>
                                                 <a class="dropdown-item display-md border-bottom py-3 text-secondary-dark d-flex gap-md-3 gap-2 align-items-center justify-content-between"
                                                     href="../profile.html">
-                                                    <span>تعديل حسابي</span>
-                                                    <i class="fas fa-chevron-left"></i>
+                                                    <span>Profile</span>
+                                                    <i class="fas fa-chevron-right"></i>
                                                 </a>
                                             </li>
 
                                             <li>
                                                 <a class="dropdown-item display-md border-bottom py-3 text-secondary-dark d-flex gap-md-3 gap-2 align-items-center justify-content-between"
                                                     href="../myorders.html">
-                                                    <span>طلباتي</span>
-                                                    <i class="fas fa-chevron-left"></i>
+                                                    <span>Orders</span>
+                                                    <i class="fas fa-chevron-right"></i>
                                                 </a>
                                             </li>
 
                                             <li>
                                                 <a class="dropdown-item display-md border-bottom py-3 text-secondary-dark d-flex gap-md-3 gap-2 align-items-center justify-content-between"
                                                     href="../wallet.html">
-                                                    <span>المحفظة</span>
-                                                    <i class="fas fa-chevron-left"></i>
+                                                    <span>Wallet</span>
+                                                    <i class="fas fa-chevron-right"></i>
                                                 </a>
                                             </li>
 
                                             <li>
                                                 <a class="dropdown-item display-md py-3 text-secondary-dark d-flex gap-md-3 gap-2 align-items-center justify-content-between"
                                                     href="#">
-                                                    <span>تسجيل الخروج</span>
-                                                    <i class="fas fa-chevron-left"></i>
+                                                    <span>Logout</span>
+                                                    <i class="fas fa-chevron-right"></i>
                                                 </a>
                                             </li>
                                         </ul>
@@ -203,18 +203,16 @@
 
                             <ul class="navbar-nav mb-2 mb-lg-0 me-lg-1 me-xlg-3 align-items-xl-center">
                                 <li class="nav-item">
-                                    <a class="nav-link  px-2  px-xxl-8" href="../index.html">الرئيسية</a>
+                                    <a class="nav-link  px-2  px-xxl-7" href="../index.html">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link  px-2  px-xxl-8 " href="../services.html">الخدمات</a>
+                                    <a class="nav-link  px-2  px-xxl-7 " href="../services.html">Services</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link  px-2  px-xxl-8" href="../about-us.html">من
-                                        نحن</a>
+                                    <a class="nav-link  px-2  px-xxl-7" href="../about-us.html"> About Us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link px-2  px-xxl-8" href="../contact-us.html">اتصل
-                                        بنا</a>
+                                    <a class="nav-link px-2  px-xxl-7" href="../contact-us.html">Contact Us</a>
                                 </li>
                             </ul>
                         </div>
@@ -233,7 +231,7 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        الفاتورة
+                                        Bill
                                     </td>
                                     <th>
                                         JD789224
@@ -241,15 +239,15 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        تاريخ الإصدار
+                                        Date
                                     </td>
                                     <th>
-                                        20 ديسمبر, 2022
+                                        20 DEC, 2022
                                     </th>
                                 </tr>
                                 <tr>
                                     <td>
-                                        رقم الطلب
+                                        Order Number
                                     </td>
                                     <th>
                                         89789224
@@ -257,7 +255,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        الدفع
+                                        Payment
                                     </td>
                                     <th>
                                         Credit/Debit Card
@@ -265,7 +263,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        البيانات
+                                        Information
                                     </td>
                                     <th>
                                         Ayman Elattar <br>
@@ -278,11 +276,11 @@
                         <div class="text-center mt-2 d-print-none">
                             <button class="btn me-2 printpage-button">
                                 <i class="fas fa-print me-1"></i>
-                                طباعة
+                                Print
                             </button>
                             <a href="#">
                                 <i class="fas fa-download me-1"></i>
-                                تحميل
+                                Download
                             </a>
                         </div>
                     </aside>
@@ -294,19 +292,19 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th>
-                                                الاشتراك
+                                                Subscribtion
                                             </th>
                                             <th>
-                                                الدومين
+                                                Domain
                                             </th>
                                             <th>
-                                                الكمية
+                                                Quantity
                                             </th>
                                             <th>
-                                                السعر
+                                                Price
                                             </th>
                                             <th>
-                                                المجمل
+                                                Total
                                             </th>
                                         </tr>
                                     </thead>
@@ -330,7 +328,7 @@
                                         </tr>
                                         <tr class="display-md">
                                             <td class="text-end fw-bold py-1" colspan="4">
-                                                جزئ مجمل
+                                                Sub-Total
                                             </td>
                                             <td class="py-1">
                                                 $87 USD
@@ -362,7 +360,7 @@
                                         </tr>
                                         <tr class="display-md">
                                             <td class="text-end fw-bold py-1" colspan="4">
-                                                جزئ مجمل
+                                                Sub-Total
                                             </td>
                                             <td class="py-1">
                                                 $87 USD
@@ -394,7 +392,7 @@
                                         </tr>
                                         <tr class="display-md">
                                             <td class="text-end  py-1" colspan="4">
-                                                جزئ مجمل
+                                                Sub-Total
                                             </td>
                                             <td class="py-1 fw-bold">
                                                 $87 USD
@@ -406,13 +404,13 @@
                                 </table>
                             </div>
 
-                            <div class="w-lg-30 w-50 ms-auto mt-5">
-                                <h6 class="fw-bold mb-4">تلخيص الدفع:</h6>
+                            <div class="w-lg-40 w-60 ms-auto mt-5">
+                                <h6 class="fw-bold mb-4">Payment Summary:</h6>
                                 <table class="table table-borderless table-light">
                                     <tbody>
                                         <tr>
                                             <td>
-                                                الاشتراك
+                                                Subscribtion
                                             </td>
                                             <th class="text-end">
                                                 $565 USD
@@ -420,7 +418,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                المجمل
+                                                Total
                                             </td>
                                             <th class="text-end">
                                                 $456 USD
@@ -439,7 +437,6 @@
         </div>
     </div>
 
-
     <footer class="d-print-none">
         <div class="bg-paper py-6">
             <div class="container">
@@ -457,16 +454,15 @@
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
                                         <a href="../index.html"
-                                            class="text-secondary-dark nav-link maplink pt-0 pb-xl-4 pb-xxl-3">الرئيسية</a>
+                                            class="text-secondary-dark nav-link maplink pt-0 pb-xl-4 pb-xxl-3">Home</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="../about-us.html"
-                                            class="nav-link text-secondary-dark maplink py-xl-4 py-xxl-3">من
-                                            نحن</a>
+                                            class="nav-link text-secondary-dark maplink py-xl-4 py-xxl-3">About Us</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="../services.html"
-                                            class="nav-link text-secondary-dark maplink py-xl-4 py-xxl-3">الخدمات</a>
+                                            class="nav-link text-secondary-dark maplink py-xl-4 py-xxl-3">Services</a>
                                     </li>
                                 </ul>
                             </div>
@@ -474,20 +470,18 @@
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
                                         <a href="../usage-rules.html"
-                                            class="nav-link text-secondary-dark maplink pt-0 pb-xl-4 pb-xxl-3">سياسة
-                                            الاستخدام</a>
+                                            class="nav-link text-secondary-dark maplink pt-0 pb-xl-4 pb-xxl-3">Usage
+                                            Policy</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="../who-benefit.html"
-                                            class="nav-link text-secondary-dark maplink py-xl-4 py-xxl-3">من هم
-                                            المستفيدون</a>
+                                            class="nav-link text-secondary-dark maplink py-xl-4 py-xxl-3">
+                                            Beneficiaries</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="../servicers.html"
-                                            class="nav-link text-secondary-dark maplink py-xl-4 py-xxl-3">من
-                                            هم
-                                            مقدمو
-                                            الخدمة</a>
+                                            class="nav-link text-secondary-dark maplink py-xl-4 py-xxl-3">
+                                            Service providers</a>
                                     </li>
                                 </ul>
                             </div>
@@ -495,23 +489,24 @@
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
                                         <a href="../contact-us.html"
-                                            class="nav-link text-secondary-dark maplink pt-0 pb-xl-4 pb-xxl-3">اتصل
-                                            بنا</a>
+                                            class="nav-link text-secondary-dark maplink pt-0 pb-xl-4 pb-xxl-3">Contact
+                                            Us
+                                        </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="../manage-jadeer.html"
-                                            class="nav-link text-secondary-dark maplink py-xl-4 py-xxl-3">إدارة
-                                            جدير</a>
+                                            class="nav-link text-secondary-dark maplink py-xl-4 py-xxl-3">
+                                            Managment</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="../markting.html"
-                                            class="nav-link text-secondary-dark maplink py-xl-4 py-xxl-3">التسويق</a>
+                                            class="nav-link text-secondary-dark maplink py-xl-4 py-xxl-3">Markting</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6  col-xl-3 ms-xl-n1 ms-xxl-0 ps-xxl-9">
+                    <div class="col-md-6  col-xl-3 ps-xxl-12">
                         <div class="d-flex gap-2 align-items-center mb-2">
                             <i class="fas fa-location-dot text-secondary display-omd"></i>
                             <span class="text-light-secondary-dark info-text">السعودية , مكة , شارع احمد على</span>
@@ -560,7 +555,9 @@
         <div class="text-center py-3 py-xxl-5 bg-secondary-dark bg-opacity-10">
             <div class="container">
                 <p class="mb-0 bottom-footer-text">
-                    جميع الحقوق محفوظة لمنصة جدير &copy; <script>
+                    All rights reserved to Jadeer ©
+
+                    <script>
                         document.write(new Date().getFullYear())
 
                     </script>
@@ -568,6 +565,8 @@
             </div>
         </div>
     </footer>
+
+
 
     <!-- Tourguide -->
     <div class="tourguide-wrap d-print-none">
@@ -579,13 +578,13 @@
                 class="tourguide-message pointer-event-none shadow bg-secondary px-5 py-2 text-white position-absolute">
                 <!-- Text -->
                 <div class="message-text" data-simplebar>
-                    مرحبا بك انا مساعدك الشخصي
+                    Hello, I am your personal assistant
                 </div>
                 <!-- Actions -->
                 <div class="text-center tourguide-actions mt-1">
                     <div class=" btn-group btn-group-sm rounded-3">
-                        <button class="btn close btn-danger" type="button">اغلق</button>
-                        <button class="btn start btn-primary" type="button">ابدأ</button>
+                        <button class="btn close btn-danger" type="button">Close</button>
+                        <button class="btn start btn-primary" type="button">Start</button>
                     </div>
                 </div>
 
@@ -619,8 +618,6 @@
     <script src="../../../js/libs/aos.js"></script>
     <script src="../../../js/libs/jquery.lazy.min.js"></script>
     <script src="../../../js/libs/simplebar.js"></script>
-    <script type="text/javascript"
-        src="https://cdn.datatables.net/v/bs5/dt-1.12.1/af-2.4.0/r-2.3.0/sp-2.0.2/datatables.min.js"></script>
     <script src="../../../js/app.js"></script>
 </body>
 
