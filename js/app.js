@@ -36,6 +36,9 @@ $(function () {
   // My orders page
   const orderNavpills = $(".orderspills-carousel");
 
+  // Bils list page
+  const billsListTable = $("#bills-table");
+
   // chat
   const chatBody = $(".chat-wrap .chat-body .simplebar-content-wrapper");
   const chatForm = $(".chat-wrap .chat-footer form");
@@ -54,6 +57,8 @@ $(function () {
       offset: [0, 8],
     });
   });
+
+  const fliedIcon = $(".fliedicon-button");
 
   /* 
     - Global Reused
@@ -454,7 +459,57 @@ $(function () {
       }
     });
   }
+  // 2 - lazyloading in services page
+  // for more info :
+  if ($(".services-list").length) {
+    let serviceInputs = $(
+      ".service-item .img-header  .service-check .form-check-input"
+    );
 
+    let $servicesList = $(".services-list").infiniteScroll({
+      path: function () {
+        return this.loadCount < 2 && "?next=" + this.loadCount;
+      },
+      append: ".service-item",
+      history: false,
+      status: ".page-load-status",
+    });
+
+    $servicesList.on(
+      "append.infiniteScroll",
+      function (event, body, path, items, response) {
+        // Refresh AOS animation
+        AOS.refreshHard();
+        // Refresh Image Lazy
+        $(".lazy").Lazy();
+        // Select new inputs added
+        serviceInputs = $(
+          ".service-item .img-header  .service-check .form-check-input"
+        );
+        onServiceChecked();
+      }
+    );
+
+    // Display flied icon if there are any input checked
+    onServiceChecked();
+
+    function onServiceChecked() {
+      let isInputCheck = new Set();
+      serviceInputs.each(function () {
+        $(this).on("change", function (e) {
+          isInputCheck.clear();
+          serviceInputs.each(function () {
+            isInputCheck.add($(this)[0].checked);
+          });
+          if (isInputCheck.has(true)) {
+            fliedIcon.addClass("show");
+          } else {
+            fliedIcon.removeClass("show");
+          }
+        });
+      });
+    }
+  }
   // My orders page carousel
   if (orderNavpills.length) {
     orderNavpills.owlCarousel({
@@ -481,6 +536,45 @@ $(function () {
     });
     toggleActivePills(orderNavpills);
   }
+
+  // Bills list page
+  if (billsListTable.length) {
+    let language = () => {
+      if (siteLanguage === "rtl") {
+        return {
+          loadingRecords: "جارٍ التحميل...",
+          lengthMenu: "أظهر _MENU_ فاتورة",
+          zeroRecords: "لم يعثر على أية فواتير",
+          info: "إظهار _START_ إلى _END_ من أصل _TOTAL_ فاتورة",
+          search: "ابحث:",
+          paginate: {
+            first: "الأول",
+            previous: "السابق",
+            next: "التالي",
+            last: "الأخير",
+          },
+          processing: "جارٍ المعالجة...",
+          emptyTable: "لا يوجد فواتير متاحة في الجدول",
+          infoEmpty: "يعرض 0 إلى 0 من أصل 0 ",
+          infoFiltered: "(مرشحة من مجموع _MAX_ مُدخل)",
+        };
+      }
+    };
+    let datatablesOptions = {
+      responsive: {
+        details: true,
+      },
+      language: language(),
+      columnDefs: [
+        {
+          targets: "no-sort",
+          orderable: false,
+        },
+      ],
+    };
+    billsListTable.DataTable(datatablesOptions);
+  }
+
   /* 
     - Edit Profile Page
     1 - When click on edit button
