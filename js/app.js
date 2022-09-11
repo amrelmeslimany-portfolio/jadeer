@@ -32,7 +32,7 @@ $(function () {
   // Edit profile page
   const readonlyInputs = $(".readonly-input");
   const commentsCarousel = $(".comments-carousel");
-  const tagsForm = $(".tags-form");
+  const tagsForm = $(".tagify");
 
   // My orders page
   const orderNavpills = $(".orderspills-carousel");
@@ -663,18 +663,9 @@ $(function () {
 
   //  3 - handle tags
   if (tagsForm.length) {
-    // const tagsList = $(".tags-list");
-    // tagsForm.tags({
-    //   tagsList,
-    // });
-
-    $(".tagify").tagify({
+    tagsForm.tagify({
       whitelist: ["استشارات قانونيية", "استشارات غير قانونية"],
       userInput: false,
-      dropdown: {
-        classname: "tags_list",
-        closeOnSelect: false, // keep the dropdown open after selecting a suggestion
-      },
     });
   }
 
