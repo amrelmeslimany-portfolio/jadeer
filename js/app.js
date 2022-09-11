@@ -15,6 +15,7 @@ $(function () {
   const tourguideWrap = $(".tourguide-wrap");
   const imgPreviewWrap = $(".img-upload-wrap");
   const filesUploadWrap = $(".fileupload-wrap");
+  const printBTN = $(".printpage-button");
 
   // Home Vars
   const videoWrapCarousel = $(".video-carousel");
@@ -205,6 +206,8 @@ $(function () {
       });
     }
   }
+
+  printBTN.length && printBTN.click(() => window.print());
 
   // 3 -- Init global plugins
   // 3.1 -- AOS plugin (Scroll Animation)
@@ -660,10 +663,18 @@ $(function () {
 
   //  3 - handle tags
   if (tagsForm.length) {
-    const tagsList = $(".tags-list");
+    // const tagsList = $(".tags-list");
+    // tagsForm.tags({
+    //   tagsList,
+    // });
 
-    tagsForm.tags({
-      tagsList,
+    $(".tagify").tagify({
+      whitelist: ["استشارات قانونيية", "استشارات غير قانونية"],
+      userInput: false,
+      dropdown: {
+        classname: "tags_list",
+        closeOnSelect: false, // keep the dropdown open after selecting a suggestion
+      },
     });
   }
 
